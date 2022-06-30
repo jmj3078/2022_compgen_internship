@@ -16,4 +16,4 @@ BAM=$1
 SAMPLE=$2
 BED=$3
 
-gatk --java-options "-XX:+UseSerialGC -Xms4G -Xmx4G -Djava.io.tmpdir=./log/" HaplotypeCaller -R $REF -I $BAM -O $SAMPLE\.g.vcf.gz --dbsnp $dbSNP -ERC GVCF --native-pair-hmm-threads 2 -L $BED
+gatk --java-options "-XX:+UseSerialGC -Xms2G -Xmx2G -Djava.io.tmpdir=./log/" HaplotypeCaller -R $REF -I $BAM -O $SAMPLE\.g.vcf.gz --dbsnp $dbSNP -ERC GVCF --native-pair-hmm-threads 2 -L $BED
