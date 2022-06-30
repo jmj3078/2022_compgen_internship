@@ -7,7 +7,7 @@
 #SBATCH -o ./log/gatk_hardfilter_%j.out
 #SBATCH -e ./log/gatk_ hardfilter_%j.err
 #SBATCH --mail-type=FAIL
-#SBATCH --mail-user=your@email.address
+#SBATCH --mail-user=jmj3078@g.skku.edu
 
 gatk --java-options "-XX:+UseSerialGC -Xmx2G -Xmx2G -Djava.io.tmpdir=./log/" SelectVariants \
 -V merged.vcf.gz \

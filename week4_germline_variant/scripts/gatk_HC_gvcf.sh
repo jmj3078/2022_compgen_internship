@@ -7,7 +7,7 @@
 #SBATCH -o ./log/gatk_HC_%j.out
 #SBATCH -e ./log/gatk_HC_%j.err
 #SBATCH --mail-type=FAIL
-#SBATCH --mail-user=your@email.address
+#SBATCH --mail-user=jmj3078@g.skku.edu
 
 REF=/data/references/b37/human_g1k_v37_decoy.fasta
 dbSNP=/data/references/b37/dbsnp_147_b37_common_all_20160601.vcf
