@@ -18,8 +18,8 @@ date
 gatk --java-options "-XX:+UseSerialGC -Xmx2G -Xmx2G -Djava.io.tmpdir=./log/" GenomicsDBImport \
 -V 1C_HC.g.vcf.gz \
 -V 1C_amp.g.vcf.gz \
--V 1F-HC.g.vcf.gz \
--V 1F-amp.g.vcf.gz \
+-V 1F_HC.g.vcf.gz \
+-V 1F_amp.g.vcf.gz \
 --genomicsdb-workspace-path merged_db \
 -L $BED
 
