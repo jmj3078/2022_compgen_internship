@@ -9,6 +9,8 @@
 #SBATCH --mail-type=FAIL
 #SBATCH --mail-user=jmj3078@g.skku.edu
 
+date
+
 gatk --java-options "-XX:+UseSerialGC -Xmx2G -Xmx2G -Djava.io.tmpdir=./log/" SelectVariants \
 -V merged.vcf.gz \
 -select-type SNP \
@@ -37,3 +39,5 @@ gatk --java-options "-XX:+UseSerialGC -Xmx2G -Xmx2G -Djava.io.tmpdir=./log/" Var
 -filter "FS > 200.0" --filter-name "FS200" \
 -filter "ReadPosRankSum < -20.0" --filter-name "ReadPosRankSum-20" \
 -O indels_filtered.vcf.gz
+
+date
