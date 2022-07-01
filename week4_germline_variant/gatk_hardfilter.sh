@@ -5,7 +5,7 @@
 #SBATCH -p 48core
 #SBATCH --mem=2G
 #SBATCH -o ./log/gatk_hardfilter_%j.out
-#SBATCH -e ./log/gatk_ hardfilter_%j.err
+#SBATCH -e ./log/gatk_hardfilter_%j.err
 #SBATCH --mail-type=FAIL
 #SBATCH --mail-user=jmj3078@g.skku.edu
 
