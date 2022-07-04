@@ -1,0 +1,155 @@
+<!-- DocSum DTD for snp database -->
+
+<!--~~ !dtd
+~~json
+   <json type='esummary' version='0.3'>
+       <config lcnames='true'/>
+   </json>
+~~-->
+
+<!ENTITY	 % T_int		"(#PCDATA)">
+<!ENTITY	 % T_string		"(#PCDATA)">
+
+<!-- Members definition of Structure type: T_MAF -->
+<!ELEMENT	STUDY		%T_string;>
+<!ELEMENT	FREQ		%T_string;>
+
+<!-- Definition of Structure type: T_MAF -->
+<!--~~ <MAF>
+~~json <object/>
+~~-->
+<!ENTITY	 % T_MAF "(
+			STUDY?,
+			FREQ?
+			)
+			">
+
+<!-- Definition of List type: T_MafList -->
+<!ELEMENT	MAF	%T_MAF;>
+<!ENTITY	 % T_MafList	"(MAF)*">
+
+<!-- Members definition of Structure type: T_GENE_E -->
+<!ELEMENT	NAME		%T_string;>
+<!ELEMENT	GENE_ID		%T_string;>
+
+<!-- Definition of Structure type: T_GENE_E -->
+<!--~~ <GENE_E>
+~~json <object/>
+~~-->
+<!ENTITY	 % T_GENE_E "(
+			NAME?,
+			GENE_ID?
+			)
+			">
+
+<!-- Definition of List type: T_GeneList -->
+<!ELEMENT	GENE_E	%T_GENE_E;>
+<!ENTITY	 % T_GeneList	"(GENE_E)*">
+
+<!-- Members definition of Structure type: T_DocSum -->
+<!--~~ <SNP_ID>
+~~json <number/>
+~~-->
+<!ELEMENT	SNP_ID		%T_int;>
+<!ELEMENT	ALLELE_ORIGIN		%T_string;>
+<!ELEMENT	GLOBAL_MAFS		%T_MafList;>
+<!ELEMENT	GLOBAL_POPULATION		%T_string;>
+<!--~~ <GLOBAL_SAMPLESIZE>
+~~json <number/>
+~~-->
+<!ELEMENT	GLOBAL_SAMPLESIZE		%T_int;>
+<!ELEMENT	SUSPECTED		%T_string;>
+<!ELEMENT	CLINICAL_SIGNIFICANCE		%T_string;>
+<!ELEMENT	GENES		%T_GeneList;>
+<!ELEMENT	ACC		%T_string;>
+<!ELEMENT	CHR		%T_string;>
+<!ELEMENT	HANDLE		%T_string;>
+<!ELEMENT	SPDI		%T_string;>
+<!ELEMENT	FXN_CLASS		%T_string;>
+<!ELEMENT	VALIDATED		%T_string;>
+<!ELEMENT	DOCSUM		%T_string;>
+<!--~~ <TAX_ID>
+~~json <number/>
+~~-->
+<!ELEMENT	TAX_ID		%T_int;>
+<!--~~ <ORIG_BUILD>
+~~json <number/>
+~~-->
+<!ELEMENT	ORIG_BUILD		%T_int;>
+<!--~~ <UPD_BUILD>
+~~json <number/>
+~~-->
+<!ELEMENT	UPD_BUILD		%T_int;>
+<!ELEMENT	CREATEDATE		%T_string;>
+<!ELEMENT	UPDATEDATE		%T_string;>
+<!ELEMENT	SS		%T_string;>
+<!ELEMENT	ALLELE		%T_string;>
+<!ELEMENT	SNP_CLASS		%T_string;>
+<!ELEMENT	CHRPOS		%T_string;>
+<!ELEMENT	CHRPOS_PREV_ASSM		%T_string;>
+<!ELEMENT	TEXT		%T_string;>
+<!ELEMENT	SNP_ID_SORT		%T_string;>
+<!ELEMENT	CLINICAL_SORT		%T_string;>
+<!ELEMENT	CITED_SORT		%T_string;>
+<!ELEMENT	CHRPOS_SORT		%T_string;>
+<!ELEMENT	MERGED_SORT		%T_string;>
+<!ELEMENT	error		%T_string;>
+
+<!-- Definition of Structure type: T_DocSum -->
+<!--~~ <DocumentSummary>
+~~json <object name='@uid'/>
+~~-->
+<!ENTITY	 % T_DocSum "((
+			SNP_ID?,
+			ALLELE_ORIGIN?,
+			GLOBAL_MAFS?,
+			GLOBAL_POPULATION?,
+			GLOBAL_SAMPLESIZE?,
+			SUSPECTED?,
+			CLINICAL_SIGNIFICANCE?,
+			GENES?,
+			ACC?,
+			CHR?,
+			HANDLE?,
+			SPDI?,
+			FXN_CLASS?,
+			VALIDATED?,
+			DOCSUM?,
+			TAX_ID?,
+			ORIG_BUILD?,
+			UPD_BUILD?,
+			CREATEDATE?,
+			UPDATEDATE?,
+			SS?,
+			ALLELE?,
+			SNP_CLASS?,
+			CHRPOS?,
+			CHRPOS_PREV_ASSM?,
+			TEXT?,
+			SNP_ID_SORT?,
+			CLINICAL_SORT?,
+			CITED_SORT?,
+			CHRPOS_SORT?,
+			MERGED_SORT?
+			)
+			| error)
+			">
+
+<!ELEMENT DocumentSummary %T_DocSum;>
+<!ATTLIST DocumentSummary uid CDATA #IMPLIED>
+
+<!ELEMENT DbBuild      %T_string;>
+<!ELEMENT DocumentSummarySet (DbBuild?, DocumentSummary*)>
+<!ATTLIST DocumentSummarySet status CDATA #REQUIRED>
+<!--~~ <DocumentSummarySet>
+~~json
+   <object key="result">
+       <array key="uids" select='DocumentSummary/@uid'/>
+       <members select='DocumentSummary'/>
+   </object>
+~~-->
+<!--~~ <eSummaryResult>
+~~ json <member/>
+~~-->
+
+<!ELEMENT eSummaryResult (DocumentSummarySet?)>

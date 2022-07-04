@@ -5,6 +5,7 @@ import io
 from Bio import Entrez
 
 
+# load vcf file or vcf.gz file and get names of variants
 def vcf_names(vcf_path):
     if os.path.splitext(vcf_path)[-1] == ".gz":
         f = gzip.open(vcf_path, "rt")
@@ -20,6 +21,8 @@ def vcf_names(vcf_path):
     return vcf_names
 
 
+
+# load vcf file or vcf.gz file and convert it csv and DataFrame format.
 def vcf_to_DataFrame(vcf_path):
     if os.path.splitext(vcf_path)[-1] == ".gz":
         with gzip.open(vcf_path, "rt") as f:
@@ -36,6 +39,9 @@ def vcf_to_DataFrame(vcf_path):
     return dataframe
 
 
+
+# convert vcf variants ID to GENE name using Bio.Entrez Package.
+# You can use this code changing Parsing method or indexs of record.
 def varID_to_gene(Idlist, entrez_email):
     Entrez.email = "jmj3078@g.skku.edu"
     Entrez.tool = "MyLocalScript"
@@ -55,6 +61,7 @@ def varID_to_gene(Idlist, entrez_email):
         else:
             result.append(".")
     return result
+
 
 
 if __name__ == "__main__":
