@@ -1,0 +1,11 @@
+sbatch mutect2_call.sh bam/1C_HC.sorted.RGadded.marked.realigend.fixed.recal.bam bam/1F_HC.sorted.RGadded.marked.realigend.fixed.recal.bam 1C_HC/1C_HC.bam 1F_HC/1F_HC.bam HC bed/total.merged.bed
+sbatch mutect2_call.sh ./bam/1C_amp.sorted.RGadded.realigend.fixed.recal.bam ./bam/1F_amp.sorted.RGadded.realigend.fixed.recal.bam 1C_amp/1C_amp.bam 1F_amp/1F_amp.bam amp /scratch/2022_summer_internship/mjcho/week5_somatic_variant/bed/total.merged.bed
+
+sbatch ./mutect2_filter.sh HC.somatic.vcf.gz HC.filtered.somatic.vcf.gz ./bed/total.merged.bed
+sbatch ./mutect2_filter.sh amp.somatic.vcf.gz amp.filtered.somatic.vcf.gz ./bed/total.merged.bed 
+
+/opt/tools/annovar/convert2annovar.pl -format vcf4 HC.filtered.somatic.vcf.gz > HC.avinput
+/opt/tools/annovar/convert2annovar.pl -format vcf4 amp.filtered.somatic.vcf.gz > amp.avinput
+
+sbatch run_annovar.sh HC
+sbatch run_annovar.sh amp

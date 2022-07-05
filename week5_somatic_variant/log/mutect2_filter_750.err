@@ -1,0 +1,41 @@
+Using GATK jar /opt/biogrids/x86_64-linux/gatk/4.2.5.0/bin/gatk-package-4.2.5.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -XX:+UseSerialGC -Xms1G -Xmx1G -Djava.io.tmpdir=./log/ -jar /opt/biogrids/x86_64-linux/gatk/4.2.5.0/bin/gatk-package-4.2.5.0-local.jar FilterMutectCalls -R /data/references/b37/human_g1k_v37_decoy.fasta -V amp.somatic.vcf.gz -O amp.filtered.somatic.vcf.gz -L ./bed/total.merged.bed
+13:48:55.229 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/opt/biogrids/x86_64-linux/gatk/4.2.5.0/bin/gatk-package-4.2.5.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Jul 05, 2022 1:48:55 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+13:48:55.440 INFO  FilterMutectCalls - ------------------------------------------------------------
+13:48:55.440 INFO  FilterMutectCalls - The Genome Analysis Toolkit (GATK) v4.2.5.0
+13:48:55.440 INFO  FilterMutectCalls - For support and documentation go to https://software.broadinstitute.org/gatk/
+13:48:55.440 INFO  FilterMutectCalls - Executing as mjcho@compgen on Linux v3.10.0-1160.el7.x86_64 amd64
+13:48:55.440 INFO  FilterMutectCalls - Java runtime: OpenJDK 64-Bit Server VM v1.8.0_322-b06
+13:48:55.441 INFO  FilterMutectCalls - Start Date/Time: July 5, 2022 1:48:55 PM KST
+13:48:55.441 INFO  FilterMutectCalls - ------------------------------------------------------------
+13:48:55.441 INFO  FilterMutectCalls - ------------------------------------------------------------
+13:48:55.441 INFO  FilterMutectCalls - HTSJDK Version: 2.24.1
+13:48:55.441 INFO  FilterMutectCalls - Picard Version: 2.25.4
+13:48:55.441 INFO  FilterMutectCalls - Built for Spark Version: 2.4.5
+13:48:55.441 INFO  FilterMutectCalls - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+13:48:55.441 INFO  FilterMutectCalls - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+13:48:55.441 INFO  FilterMutectCalls - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+13:48:55.442 INFO  FilterMutectCalls - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+13:48:55.442 INFO  FilterMutectCalls - Deflater: IntelDeflater
+13:48:55.442 INFO  FilterMutectCalls - Inflater: IntelInflater
+13:48:55.442 INFO  FilterMutectCalls - GCS max retries/reopens: 20
+13:48:55.442 INFO  FilterMutectCalls - Requester pays: disabled
+13:48:55.442 INFO  FilterMutectCalls - Initializing engine
+13:48:55.898 INFO  FeatureManager - Using codec VCFCodec to read file file:///scratch/2022_summer_internship/mjcho/week5_somatic_variant/amp.somatic.vcf.gz
+13:48:55.932 WARN  IntelInflater - Zero Bytes Written : 0
+13:48:55.966 WARN  IntelInflater - Zero Bytes Written : 0
+13:48:55.979 INFO  FeatureManager - Using codec BEDCodec to read file file:///scratch/2022_summer_internship/mjcho/week5_somatic_variant/./bed/total.merged.bed
+13:48:56.013 INFO  IntervalArgumentCollection - Processing 67128 bp from intervals
+13:48:56.017 INFO  FilterMutectCalls - Done initializing engine
+13:48:56.109 INFO  FilterMutectCalls - Shutting down engine
+[July 5, 2022 1:48:56 PM KST] org.broadinstitute.hellbender.tools.walkers.mutect.filtering.FilterMutectCalls done. Elapsed time: 0.02 minutes.
+Runtime.totalMemory()=1037959168
+***********************************************************************
+
+A USER ERROR has occurred: Mutect stats table amp.somatic.vcf.gz.stats not found.  When Mutect2 outputs a file calls.vcf it also creates a calls.vcf.stats file.  Perhaps this file was not moved along with the vcf, or perhaps it was not delocalized from a virtual machine while running in the cloud.
+
+***********************************************************************
+Set the system property GATK_STACKTRACE_ON_USER_EXCEPTION (--java-options '-DGATK_STACKTRACE_ON_USER_EXCEPTION=true') to print the stack trace.

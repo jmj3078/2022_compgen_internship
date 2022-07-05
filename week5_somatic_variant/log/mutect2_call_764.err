@@ -1,0 +1,93 @@
+Using GATK jar /opt/biogrids/x86_64-linux/gatk/4.2.5.0/bin/gatk-package-4.2.5.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -XX:+UseSerialGC -Xms2G -Xmx2G -Djava.io.tmpdir=./log/ -jar /opt/biogrids/x86_64-linux/gatk/4.2.5.0/bin/gatk-package-4.2.5.0-local.jar Mutect2 -R /data/references/b37/human_g1k_v37_decoy.fasta -I ./bam/1C_amp.sorted.RGadded.realigend.fixed.recal.bam -I ./bam/1F_amp.sorted.RGadded.realigend.fixed.recal.bam -tumor 1C_amp/1C_amp.bam -normal 1F_amp/1F_amp.bam -O amp.somatic.vcf.gz --native-pair-hmm-threads 2 -L /scratch/2022_summer_internship/mjcho/week5_somatic_variant/bed/total.merged.bed
+14:08:31.839 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/opt/biogrids/x86_64-linux/gatk/4.2.5.0/bin/gatk-package-4.2.5.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Jul 05, 2022 2:08:31 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+14:08:31.946 INFO  Mutect2 - ------------------------------------------------------------
+14:08:31.947 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.5.0
+14:08:31.947 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+14:08:31.947 INFO  Mutect2 - Executing as mjcho@compgen on Linux v3.10.0-1160.el7.x86_64 amd64
+14:08:31.947 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v1.8.0_322-b06
+14:08:31.947 INFO  Mutect2 - Start Date/Time: July 5, 2022 2:08:31 PM KST
+14:08:31.947 INFO  Mutect2 - ------------------------------------------------------------
+14:08:31.947 INFO  Mutect2 - ------------------------------------------------------------
+14:08:31.948 INFO  Mutect2 - HTSJDK Version: 2.24.1
+14:08:31.948 INFO  Mutect2 - Picard Version: 2.25.4
+14:08:31.948 INFO  Mutect2 - Built for Spark Version: 2.4.5
+14:08:31.948 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+14:08:31.948 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+14:08:31.948 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+14:08:31.948 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+14:08:31.948 INFO  Mutect2 - Deflater: IntelDeflater
+14:08:31.948 INFO  Mutect2 - Inflater: IntelInflater
+14:08:31.948 INFO  Mutect2 - GCS max retries/reopens: 20
+14:08:31.948 INFO  Mutect2 - Requester pays: disabled
+14:08:31.948 INFO  Mutect2 - Initializing engine
+WARNING: BAM index file /scratch/2022_summer_internship/mjcho/week5_somatic_variant/./bam/1C_amp.sorted.RGadded.realigend.fixed.recal.bai is older than BAM /scratch/2022_summer_internship/mjcho/week5_somatic_variant/./bam/1C_amp.sorted.RGadded.realigend.fixed.recal.bam
+WARNING: BAM index file /scratch/2022_summer_internship/mjcho/week5_somatic_variant/./bam/1F_amp.sorted.RGadded.realigend.fixed.recal.bai is older than BAM /scratch/2022_summer_internship/mjcho/week5_somatic_variant/./bam/1F_amp.sorted.RGadded.realigend.fixed.recal.bam
+14:08:32.399 INFO  FeatureManager - Using codec BEDCodec to read file file:///scratch/2022_summer_internship/mjcho/week5_somatic_variant/bed/total.merged.bed
+14:08:32.414 INFO  IntervalArgumentCollection - Processing 67128 bp from intervals
+14:08:32.426 INFO  Mutect2 - Done initializing engine
+14:08:32.445 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/opt/biogrids/x86_64-linux/gatk/4.2.5.0/bin/gatk-package-4.2.5.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+14:08:32.445 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/opt/biogrids/x86_64-linux/gatk/4.2.5.0/bin/gatk-package-4.2.5.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+14:08:32.487 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+14:08:32.487 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+14:08:32.487 INFO  IntelPairHmm - Available threads: 2
+14:08:32.487 INFO  IntelPairHmm - Requested threads: 2
+14:08:32.487 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+14:08:32.519 INFO  ProgressMeter - Starting traversal
+14:08:32.519 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+14:08:44.019 INFO  ProgressMeter -           1:35920039              0.2                    20            104.4
+14:08:59.535 INFO  ProgressMeter -           1:84945015              0.5                    40             88.8
+14:09:14.136 INFO  ProgressMeter -          1:201184187              0.7                    60             86.5
+14:09:39.524 INFO  ProgressMeter -          1:230914715              1.1                    80             71.6
+14:09:55.782 INFO  ProgressMeter -           2:54035432              1.4                    90             64.9
+14:10:06.204 INFO  ProgressMeter -           2:71221860              1.6                   100             64.0
+14:10:38.232 INFO  ProgressMeter -          2:121989452              2.1                   120             57.3
+14:11:05.081 INFO  ProgressMeter -          2:219903144              2.5                   140             55.1
+14:11:26.100 INFO  ProgressMeter -          2:231406603              2.9                   150             51.8
+14:11:42.876 INFO  ProgressMeter -          2:234473998              3.2                   160             50.4
+14:12:04.153 INFO  ProgressMeter -           3:39161445              3.5                   180             51.0
+14:12:20.958 INFO  ProgressMeter -          3:111993740              3.8                   200             52.5
+14:12:39.464 INFO  ProgressMeter -          3:145938705              4.1                   220             53.5
+14:12:53.853 INFO  ProgressMeter -           4:23814640              4.4                   240             55.1
+14:14:05.487 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.038329088000000004
+14:14:05.487 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 18.933156907
+14:14:05.488 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 8.13 sec
+14:14:05.491 INFO  Mutect2 - Shutting down engine
+[July 5, 2022 2:14:05 PM KST] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 5.56 minutes.
+Runtime.totalMemory()=2075918336
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at htsjdk.samtools.util.StringUtil.bytesToString(StringUtil.java:301)
+	at htsjdk.samtools.util.StringUtil.bytesToString(StringUtil.java:288)
+	at htsjdk.samtools.BinaryTagCodec.readNullTerminatedString(BinaryTagCodec.java:423)
+	at htsjdk.samtools.BinaryTagCodec.readSingleValue(BinaryTagCodec.java:318)
+	at htsjdk.samtools.BinaryTagCodec.readTags(BinaryTagCodec.java:282)
+	at htsjdk.samtools.BAMRecord.decodeAttributes(BAMRecord.java:412)
+	at htsjdk.samtools.BAMRecord.getAttribute(BAMRecord.java:391)
+	at htsjdk.samtools.SAMRecord.getAttribute(SAMRecord.java:1169)
+	at htsjdk.samtools.MergingSamRecordIterator.next(MergingSamRecordIterator.java:136)
+	at htsjdk.samtools.MergingSamRecordIterator.next(MergingSamRecordIterator.java:37)
+	at org.broadinstitute.hellbender.utils.iterators.SAMRecordToReadIterator.next(SAMRecordToReadIterator.java:27)
+	at org.broadinstitute.hellbender.utils.iterators.SAMRecordToReadIterator.next(SAMRecordToReadIterator.java:13)
+	at org.broadinstitute.hellbender.utils.iterators.ReadTransformingIterator.next(ReadTransformingIterator.java:42)
+	at org.broadinstitute.hellbender.utils.iterators.ReadTransformingIterator.next(ReadTransformingIterator.java:14)
+	at org.broadinstitute.hellbender.utils.iterators.ReadFilteringIterator.loadNextRead(ReadFilteringIterator.java:53)
+	at org.broadinstitute.hellbender.utils.iterators.ReadFilteringIterator.next(ReadFilteringIterator.java:47)
+	at org.broadinstitute.hellbender.utils.iterators.ReadFilteringIterator.next(ReadFilteringIterator.java:13)
+	at org.broadinstitute.hellbender.utils.iterators.ReadTransformingIterator.next(ReadTransformingIterator.java:42)
+	at org.broadinstitute.hellbender.utils.iterators.ReadTransformingIterator.next(ReadTransformingIterator.java:14)
+	at org.broadinstitute.hellbender.utils.iterators.PushToPullIterator.fillCache(PushToPullIterator.java:72)
+	at org.broadinstitute.hellbender.utils.iterators.PushToPullIterator.advanceToNextElement(PushToPullIterator.java:58)
+	at org.broadinstitute.hellbender.utils.iterators.PushToPullIterator.next(PushToPullIterator.java:52)
+	at org.broadinstitute.hellbender.utils.iterators.ReadCachingIterator.next(ReadCachingIterator.java:42)
+	at org.broadinstitute.hellbender.utils.iterators.ReadCachingIterator.next(ReadCachingIterator.java:17)
+	at htsjdk.samtools.util.PeekableIterator.advance(PeekableIterator.java:71)
+	at htsjdk.samtools.util.PeekableIterator.next(PeekableIterator.java:57)
+	at org.broadinstitute.hellbender.utils.locusiterator.ReadStateManager.collectPendingReads(ReadStateManager.java:160)
+	at org.broadinstitute.hellbender.utils.locusiterator.LocusIteratorByState.lazyLoadNextAlignmentContext(LocusIteratorByState.java:315)
+	at org.broadinstitute.hellbender.utils.locusiterator.LocusIteratorByState.hasNext(LocusIteratorByState.java:252)
+	at org.broadinstitute.hellbender.utils.locusiterator.IntervalAlignmentContextIterator.advanceAlignmentContext(IntervalAlignmentContextIterator.java:104)
+	at org.broadinstitute.hellbender.utils.locusiterator.IntervalAlignmentContextIterator.advanceAlignmentContextToCurrentInterval(IntervalAlignmentContextIterator.java:99)
+	at org.broadinstitute.hellbender.utils.locusiterator.IntervalAlignmentContextIterator.next(IntervalAlignmentContextIterator.java:69)
