@@ -42,4 +42,5 @@ if __name__ == "__main__" :
     
     PPV = len(diff)/len(annov_comp)
     TPR = len(diff)/len(ans)
-    print(f"PPV: {round(PPV,3)}\nTPR: {round(TPR,3)}")
+    print(f"PPV: {round(PPV,3)}\nTPR: {round(TPR,3)} \
+        \nFPV: {round(1-PPV,3)}\nFPR: {round(1-TPR,3)}")

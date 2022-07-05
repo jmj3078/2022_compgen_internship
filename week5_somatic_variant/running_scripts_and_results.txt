@@ -14,9 +14,13 @@ printf "results/amp.annovar.hg19_multianno.txt\nanswer_amp.txt\n" | python cal_P
 printf "results/HC.annovar.hg19_multianno.txt\nanswer_HC.txt\n" | python cal_PPV_and_TPR.py 
 
 results : amp
-PPV : 0.273
-TPR : 0.196
+PPV: 0.273
+TPR: 0.196         
+FPV: 0.727
+FPR: 0.804
 
 results : HC
 PPV: 0.949
-TPR: 0.255
+TPR: 0.255         
+FPV: 0.051
+FPR: 0.745
