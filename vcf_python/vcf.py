@@ -65,7 +65,7 @@ def varID_to_gene(Idlist, entrez_email):
 
 
 if __name__ == "__main__":
-    vcf_path = "./samples/snps_filtered.vcf.gz"
+    vcf_path = "./samples/indels_filtered.vcf.gz"
     entrez_email = "jmj3078@g.skku.edu"
     df = vcf_to_DataFrame(vcf_path)
     IdList = df['ID'].tolist()
@@ -76,3 +76,5 @@ if __name__ == "__main__":
     s = pd.Series(SNP_genes, name='GENE')
     df = pd.concat([df, s], axis=1)
     df.to_csv(vcf_path + '.csv', index=False)
+
+    
