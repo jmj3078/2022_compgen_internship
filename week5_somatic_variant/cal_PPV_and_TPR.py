@@ -11,7 +11,7 @@ def dataframe_diff_by_col(df1, df2, which="both"):
         diff_df = comparison_df[comparison_df['_merge'] != 'both']
     else:
         diff_df = comparison_df[comparison_df['_merge'] == which]
-
+        
     return diff_df
 
 
