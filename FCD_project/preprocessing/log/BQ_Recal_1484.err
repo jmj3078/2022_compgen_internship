@@ -1,0 +1,43 @@
+##### ERROR ------------------------------------------------------------------------------------------
+##### ERROR A USER ERROR has occurred (version 3.4-46-gbc02625): 
+##### ERROR
+##### ERROR This means that one or more arguments or inputs in your command are incorrect.
+##### ERROR The error message below tells you what is the problem.
+##### ERROR
+##### ERROR If the problem is an invalid argument, please check the online documentation guide
+##### ERROR (or rerun your command with --help) to view allowable command-line arguments for this tool.
+##### ERROR
+##### ERROR Visit our website and forum for extensive documentation and answers to 
+##### ERROR commonly asked questions http://www.broadinstitute.org/gatk
+##### ERROR
+##### ERROR Please do NOT post this error to the GATK forum unless you have really tried to fix it yourself.
+##### ERROR
+##### ERROR MESSAGE: Argument '--knownSites' requires a value but none was provided
+##### ERROR ------------------------------------------------------------------------------------------
+INFO  11:22:11,011 HelpFormatter - --------------------------------------------------------------------------------- 
+INFO  11:22:11,013 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.4-46-gbc02625, Compiled 2015/07/09 17:38:12 
+INFO  11:22:11,018 HelpFormatter - Copyright (c) 2010 The Broad Institute 
+INFO  11:22:11,018 HelpFormatter - For support and documentation go to http://www.broadinstitute.org/gatk 
+INFO  11:22:11,020 HelpFormatter - Program Args: -T PrintReads -R /data/references/b37/human_g1k_v37_decoy.fasta -I WES_B_Disease.sorted.RGadded.marked.realigned.fixed.bam -BQSR WES_B_Disease.recal_data.grp -o WES_B_Disease.sorted.RGadded.marked.realigend.fixed.recal.bam 
+INFO  11:22:11,022 HelpFormatter - Executing as mjcho@compgen on Linux 3.10.0-1160.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01. 
+INFO  11:22:11,022 HelpFormatter - Date/Time: 2022/07/22 11:22:11 
+INFO  11:22:11,022 HelpFormatter - --------------------------------------------------------------------------------- 
+INFO  11:22:11,022 HelpFormatter - --------------------------------------------------------------------------------- 
+INFO  11:22:11,736 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  11:22:13,280 GATKRunReport - Uploaded run statistics report to AWS S3 
+##### ERROR ------------------------------------------------------------------------------------------
+##### ERROR A USER ERROR has occurred (version 3.4-46-gbc02625): 
+##### ERROR
+##### ERROR This means that one or more arguments or inputs in your command are incorrect.
+##### ERROR The error message below tells you what is the problem.
+##### ERROR
+##### ERROR If the problem is an invalid argument, please check the online documentation guide
+##### ERROR (or rerun your command with --help) to view allowable command-line arguments for this tool.
+##### ERROR
+##### ERROR Visit our website and forum for extensive documentation and answers to 
+##### ERROR commonly asked questions http://www.broadinstitute.org/gatk
+##### ERROR
+##### ERROR Please do NOT post this error to the GATK forum unless you have really tried to fix it yourself.
+##### ERROR
+##### ERROR MESSAGE: Couldn't read file /scratch/2022_summer_internship/mjcho/FCD_project/preprocessing/WES_B_Disease.recal_data.grp because it does not exist
+##### ERROR ------------------------------------------------------------------------------------------

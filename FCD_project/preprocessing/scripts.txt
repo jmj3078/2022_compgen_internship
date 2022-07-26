@@ -1,0 +1,7 @@
+sbatch pre_processing_1.sh Targeted_C_Normal Targeted_C_Normal Illumina /scratch/2022_summer_internship/data/project/FCD_unknown_C-N_1.fastq.gz /scratch/2022_summer_internship/data/project/FCD_unknown_C-N_2.fastq.gz 
+sbatch pre_processing_1.sh Targeted_C_Disease Targeted_C_Disease Illumina /scratch/2022_summer_internship/data/project/FCD_unknown_C-D_1.fastq.gz /scratch/2022_summer_internship/data/project/FCD_unknown_C-D_2.fastq.gz 
+sbatch pre_processing_2.sh WES_A_Normal WES_A_Normal Illumina /scratch/2022_summer_internship/data/project/FCD_unknown_A-N_1.fastq.gz /scratch/2022_summer_internship/data/project/FCD_unknown_A-N_2.fastq.gz 
+sbatch pre_processing_2.sh WES_A_Disease WES_A_Disease Illumina /scratch/2022_summer_internship/data/project/FCD_unknown_A-D_1.fastq.gz /scratch/2022_summer_internship/data/project/FCD_unknown_A-D_2.fastq.gz 
+sbatch pre_processing_2.sh WES_B_Normal WES_B_Normal Illumina /scratch/2022_summer_internship/data/project/FCD_unknown_B-N_1.fastq.gz /scratch/2022_summer_internship/data/project/FCD_unknown_B-N_2.fastq.gz 
+sbatch pre_processing_2.sh WES_B_Disease WES_B_Disease Illumina /scratch/2022_summer_internship/data/project/FCD_unknown_B-D_1.fastq.gz /scratch/2022_summer_internship/data/project/FCD_unknown_B-D_2.fastq.gz 
+

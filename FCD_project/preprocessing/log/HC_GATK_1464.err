@@ -1,0 +1,459 @@
+INFO	2022-07-21 16:29:36	SortSam	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    SortSam -SO coordinate -INPUT WES_B_Normal.bam -OUTPUT WES_B_Normal.sorted.bam -VALIDATION_STRINGENCY LENIENT -CREATE_INDEX true
+**********
+
+
+16:29:36.933 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/opt/biogrids/x86_64-linux/picard/2.26.10/bin/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+[Thu Jul 21 16:29:36 KST 2022] SortSam INPUT=WES_B_Normal.bam OUTPUT=WES_B_Normal.sorted.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true    VERBOSITY=INFO QUIET=false COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Thu Jul 21 16:29:36 KST 2022] Executing as mjcho@compgen on Linux 3.10.0-1160.el7.x86_64 amd64; OpenJDK 64-Bit Server VM 12.0.2+3; Deflater: Intel; Inflater: Intel; Provider GCS is not available; Picard version: 2.26.10
+INFO	2022-07-21 16:29:37	SortSam	Seen many non-increasing record positions. Printing Read-names as well.
+INFO	2022-07-21 16:30:24	SortSam	Read    10,000,000 records.  Elapsed time: 00:00:47s.  Time for last 10,000,000:   47s.  Last read position: 16:22,652,320.  Last read name: FCD_unknown.4589424
+INFO	2022-07-21 16:31:09	SortSam	Read    20,000,000 records.  Elapsed time: 00:01:32s.  Time for last 10,000,000:   44s.  Last read position: 1:159,998,628.  Last read name: FCD_unknown.9098791
+INFO	2022-07-21 16:31:51	SortSam	Finished reading inputs, merging and writing to output now.
+INFO	2022-07-21 16:33:12	SortSam	Wrote    10,000,000 records from a sorting collection.  Elapsed time: 00:03:35s.  Time for last 10,000,000:   79s.  Last read position: 1:54,474,762
+INFO	2022-07-21 16:34:32	SortSam	Wrote    20,000,000 records from a sorting collection.  Elapsed time: 00:04:55s.  Time for last 10,000,000:   80s.  Last read position: 1:200,842,811
+[Thu Jul 21 16:36:02 KST 2022] picard.sam.SortSam done. Elapsed time: 6.42 minutes.
+Runtime.totalMemory()=803356672
+INFO	2022-07-21 16:36:02	AddOrReplaceReadGroups	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    AddOrReplaceReadGroups -INPUT WES_B_Normal.sorted.bam -OUTPUT WES_B_Normal.sorted.RGadded.bam -SORT_ORDER coordinate -RGLB WES_B_Normal -RGPL Illumina -RGPU Illumina -RGSM WES_B_Normal -CREATE_INDEX true -VALIDATION_STRINGENCY LENIENT
+**********
+
+
+16:36:03.528 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/opt/biogrids/x86_64-linux/picard/2.26.10/bin/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+[Thu Jul 21 16:36:03 KST 2022] AddOrReplaceReadGroups INPUT=WES_B_Normal.sorted.bam OUTPUT=WES_B_Normal.sorted.RGadded.bam SORT_ORDER=coordinate RGLB=WES_B_Normal RGPL=Illumina RGPU=Illumina RGSM=WES_B_Normal VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true    RGID=1 VERBOSITY=INFO QUIET=false COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Thu Jul 21 16:36:03 KST 2022] Executing as mjcho@compgen on Linux 3.10.0-1160.el7.x86_64 amd64; OpenJDK 64-Bit Server VM 12.0.2+3; Deflater: Intel; Inflater: Intel; Provider GCS is not available; Picard version: 2.26.10
+INFO	2022-07-21 16:36:03	AddOrReplaceReadGroups	Created read-group ID=1 PL=Illumina LB=WES_B_Normal SM=WES_B_Normal
+
+INFO	2022-07-21 16:36:14	AddOrReplaceReadGroups	Processed     1,000,000 records.  Elapsed time: 00:00:10s.  Time for last 1,000,000:   10s.  Last read position: 1:2,440,867
+INFO	2022-07-21 16:36:23	AddOrReplaceReadGroups	Processed     2,000,000 records.  Elapsed time: 00:00:20s.  Time for last 1,000,000:    9s.  Last read position: 1:8,906,946
+INFO	2022-07-21 16:36:33	AddOrReplaceReadGroups	Processed     3,000,000 records.  Elapsed time: 00:00:29s.  Time for last 1,000,000:    9s.  Last read position: 1:13,840,572
+INFO	2022-07-21 16:36:43	AddOrReplaceReadGroups	Processed     4,000,000 records.  Elapsed time: 00:00:39s.  Time for last 1,000,000:    9s.  Last read position: 1:19,467,760
+INFO	2022-07-21 16:36:53	AddOrReplaceReadGroups	Processed     5,000,000 records.  Elapsed time: 00:00:49s.  Time for last 1,000,000:   10s.  Last read position: 1:24,383,125
+INFO	2022-07-21 16:37:02	AddOrReplaceReadGroups	Processed     6,000,000 records.  Elapsed time: 00:00:59s.  Time for last 1,000,000:    9s.  Last read position: 1:28,474,218
+INFO	2022-07-21 16:37:12	AddOrReplaceReadGroups	Processed     7,000,000 records.  Elapsed time: 00:01:08s.  Time for last 1,000,000:    9s.  Last read position: 1:34,665,214
+INFO	2022-07-21 16:37:22	AddOrReplaceReadGroups	Processed     8,000,000 records.  Elapsed time: 00:01:18s.  Time for last 1,000,000:    9s.  Last read position: 1:40,758,577
+INFO	2022-07-21 16:37:32	AddOrReplaceReadGroups	Processed     9,000,000 records.  Elapsed time: 00:01:28s.  Time for last 1,000,000:   10s.  Last read position: 1:45,810,115
+INFO	2022-07-21 16:37:42	AddOrReplaceReadGroups	Processed    10,000,000 records.  Elapsed time: 00:01:38s.  Time for last 1,000,000:   10s.  Last read position: 1:54,474,762
+INFO	2022-07-21 16:37:52	AddOrReplaceReadGroups	Processed    11,000,000 records.  Elapsed time: 00:01:49s.  Time for last 1,000,000:   10s.  Last read position: 1:71,719,001
+INFO	2022-07-21 16:38:03	AddOrReplaceReadGroups	Processed    12,000,000 records.  Elapsed time: 00:01:59s.  Time for last 1,000,000:   10s.  Last read position: 1:94,667,736
+INFO	2022-07-21 16:38:13	AddOrReplaceReadGroups	Processed    13,000,000 records.  Elapsed time: 00:02:09s.  Time for last 1,000,000:   10s.  Last read position: 1:111,773,468
+INFO	2022-07-21 16:38:23	AddOrReplaceReadGroups	Processed    14,000,000 records.  Elapsed time: 00:02:19s.  Time for last 1,000,000:   10s.  Last read position: 1:145,415,561
+INFO	2022-07-21 16:38:33	AddOrReplaceReadGroups	Processed    15,000,000 records.  Elapsed time: 00:02:29s.  Time for last 1,000,000:   10s.  Last read position: 1:152,080,687
+INFO	2022-07-21 16:38:43	AddOrReplaceReadGroups	Processed    16,000,000 records.  Elapsed time: 00:02:39s.  Time for last 1,000,000:    9s.  Last read position: 1:155,252,223
+INFO	2022-07-21 16:38:52	AddOrReplaceReadGroups	Processed    17,000,000 records.  Elapsed time: 00:02:48s.  Time for last 1,000,000:    9s.  Last read position: 1:159,174,621
+INFO	2022-07-21 16:39:02	AddOrReplaceReadGroups	Processed    18,000,000 records.  Elapsed time: 00:02:58s.  Time for last 1,000,000:    9s.  Last read position: 1:166,958,452
+INFO	2022-07-21 16:39:12	AddOrReplaceReadGroups	Processed    19,000,000 records.  Elapsed time: 00:03:08s.  Time for last 1,000,000:    9s.  Last read position: 1:180,167,775
+INFO	2022-07-21 16:39:22	AddOrReplaceReadGroups	Processed    20,000,000 records.  Elapsed time: 00:03:18s.  Time for last 1,000,000:   10s.  Last read position: 1:200,842,811
+INFO	2022-07-21 16:39:31	AddOrReplaceReadGroups	Processed    21,000,000 records.  Elapsed time: 00:03:28s.  Time for last 1,000,000:    9s.  Last read position: 1:205,113,953
+INFO	2022-07-21 16:39:42	AddOrReplaceReadGroups	Processed    22,000,000 records.  Elapsed time: 00:03:38s.  Time for last 1,000,000:   10s.  Last read position: 1:215,956,089
+INFO	2022-07-21 16:39:52	AddOrReplaceReadGroups	Processed    23,000,000 records.  Elapsed time: 00:03:48s.  Time for last 1,000,000:    9s.  Last read position: 1:228,467,435
+INFO	2022-07-21 16:40:02	AddOrReplaceReadGroups	Processed    24,000,000 records.  Elapsed time: 00:03:58s.  Time for last 1,000,000:   10s.  Last read position: 1:237,801,601
+INFO	2022-07-21 16:40:12	AddOrReplaceReadGroups	Processed    25,000,000 records.  Elapsed time: 00:04:08s.  Time for last 1,000,000:   10s.  Last read position: 2:5,578,048
+INFO	2022-07-21 16:40:24	AddOrReplaceReadGroups	Processed    26,000,000 records.  Elapsed time: 00:04:20s.  Time for last 1,000,000:   11s.  Last read position: 3:191,789,047
+INFO	2022-07-21 16:40:37	AddOrReplaceReadGroups	Processed    27,000,000 records.  Elapsed time: 00:04:33s.  Time for last 1,000,000:   13s.  Last read position: 8:81,800,808
+INFO	2022-07-21 16:40:50	AddOrReplaceReadGroups	Processed    28,000,000 records.  Elapsed time: 00:04:46s.  Time for last 1,000,000:   12s.  Last read position: 14:64,154,999
+INFO	2022-07-21 16:41:03	AddOrReplaceReadGroups	Processed    29,000,000 records.  Elapsed time: 00:04:59s.  Time for last 1,000,000:   13s.  Last read position: 22:47,827,205
+[Thu Jul 21 16:41:12 KST 2022] picard.sam.AddOrReplaceReadGroups done. Elapsed time: 5.15 minutes.
+Runtime.totalMemory()=275709952
+INFO	2022-07-21 16:41:12	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -INPUT WES_B_Normal.sorted.RGadded.bam -OUTPUT WES_B_Normal.sorted.RGadded.marked.bam -METRICS_FILE metrics -CREATE_INDEX true -VALIDATION_STRINGENCY LENIENT
+**********
+
+
+16:41:13.492 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/opt/biogrids/x86_64-linux/picard/2.26.10/bin/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+[Thu Jul 21 16:41:13 KST 2022] MarkDuplicates INPUT=[WES_B_Normal.sorted.RGadded.bam] OUTPUT=WES_B_Normal.sorted.RGadded.marked.bam METRICS_FILE=metrics VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true DUPLEX_UMI=false ADD_PG_TAG_TO_READS=true REMOVE_DUPLICATES=false ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 VERBOSITY=INFO QUIET=false COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Thu Jul 21 16:41:13 KST 2022] Executing as mjcho@compgen on Linux 3.10.0-1160.el7.x86_64 amd64; OpenJDK 64-Bit Server VM 12.0.2+3; Deflater: Intel; Inflater: Intel; Provider GCS is not available; Picard version: 2.26.10
+INFO	2022-07-21 16:41:13	MarkDuplicates	Start of doWork freeMemory: 267094472; totalMemory: 275841024; maxMemory: 8303607808
+INFO	2022-07-21 16:41:13	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2022-07-21 16:41:13	MarkDuplicates	Will retain up to 30085535 data points before spilling to disk.
+WARNING	2022-07-21 16:41:13	AbstractOpticalDuplicateFinderCommandLineProgram	A field field parsed out of a read name was expected to contain an integer and did not. Read name: FCD_unknown.10232533. Cause: String 'FCD_unknown.10232533' did not start with a parsable number.
+INFO	2022-07-21 16:41:19	MarkDuplicates	Read     1,000,000 records.  Elapsed time: 00:00:05s.  Time for last 1,000,000:    5s.  Last read position: 1:2,440,867
+INFO	2022-07-21 16:41:19	MarkDuplicates	Tracking 67413 as yet unmatched pairs. 14929 records in RAM.
+INFO	2022-07-21 16:41:23	MarkDuplicates	Read     2,000,000 records.  Elapsed time: 00:00:09s.  Time for last 1,000,000:    4s.  Last read position: 1:8,906,946
+INFO	2022-07-21 16:41:23	MarkDuplicates	Tracking 172606 as yet unmatched pairs. 39768 records in RAM.
+INFO	2022-07-21 16:41:27	MarkDuplicates	Read     3,000,000 records.  Elapsed time: 00:00:13s.  Time for last 1,000,000:    3s.  Last read position: 1:13,840,572
+INFO	2022-07-21 16:41:27	MarkDuplicates	Tracking 285513 as yet unmatched pairs. 63198 records in RAM.
+INFO	2022-07-21 16:41:31	MarkDuplicates	Read     4,000,000 records.  Elapsed time: 00:00:17s.  Time for last 1,000,000:    4s.  Last read position: 1:19,467,760
+INFO	2022-07-21 16:41:31	MarkDuplicates	Tracking 393520 as yet unmatched pairs. 84327 records in RAM.
+INFO	2022-07-21 16:41:35	MarkDuplicates	Read     5,000,000 records.  Elapsed time: 00:00:22s.  Time for last 1,000,000:    4s.  Last read position: 1:24,383,125
+INFO	2022-07-21 16:41:35	MarkDuplicates	Tracking 500060 as yet unmatched pairs. 103468 records in RAM.
+INFO	2022-07-21 16:41:39	MarkDuplicates	Read     6,000,000 records.  Elapsed time: 00:00:25s.  Time for last 1,000,000:    3s.  Last read position: 1:28,474,218
+INFO	2022-07-21 16:41:39	MarkDuplicates	Tracking 605697 as yet unmatched pairs. 119327 records in RAM.
+INFO	2022-07-21 16:41:43	MarkDuplicates	Read     7,000,000 records.  Elapsed time: 00:00:30s.  Time for last 1,000,000:    4s.  Last read position: 1:34,665,214
+INFO	2022-07-21 16:41:43	MarkDuplicates	Tracking 721055 as yet unmatched pairs. 136530 records in RAM.
+INFO	2022-07-21 16:41:47	MarkDuplicates	Read     8,000,000 records.  Elapsed time: 00:00:34s.  Time for last 1,000,000:    3s.  Last read position: 1:40,758,577
+INFO	2022-07-21 16:41:47	MarkDuplicates	Tracking 833184 as yet unmatched pairs. 150960 records in RAM.
+INFO	2022-07-21 16:41:51	MarkDuplicates	Read     9,000,000 records.  Elapsed time: 00:00:37s.  Time for last 1,000,000:    3s.  Last read position: 1:45,810,115
+INFO	2022-07-21 16:41:51	MarkDuplicates	Tracking 929422 as yet unmatched pairs. 161179 records in RAM.
+INFO	2022-07-21 16:41:55	MarkDuplicates	Read    10,000,000 records.  Elapsed time: 00:00:41s.  Time for last 1,000,000:    3s.  Last read position: 1:54,474,762
+INFO	2022-07-21 16:41:55	MarkDuplicates	Tracking 1046741 as yet unmatched pairs. 172422 records in RAM.
+INFO	2022-07-21 16:41:59	MarkDuplicates	Read    11,000,000 records.  Elapsed time: 00:00:45s.  Time for last 1,000,000:    3s.  Last read position: 1:71,719,001
+INFO	2022-07-21 16:41:59	MarkDuplicates	Tracking 1170281 as yet unmatched pairs. 182597 records in RAM.
+INFO	2022-07-21 16:42:02	MarkDuplicates	Read    12,000,000 records.  Elapsed time: 00:00:49s.  Time for last 1,000,000:    3s.  Last read position: 1:94,667,736
+INFO	2022-07-21 16:42:02	MarkDuplicates	Tracking 1303446 as yet unmatched pairs. 190408 records in RAM.
+INFO	2022-07-21 16:42:06	MarkDuplicates	Read    13,000,000 records.  Elapsed time: 00:00:52s.  Time for last 1,000,000:    3s.  Last read position: 1:111,773,468
+INFO	2022-07-21 16:42:06	MarkDuplicates	Tracking 1410877 as yet unmatched pairs. 191742 records in RAM.
+INFO	2022-07-21 16:42:11	MarkDuplicates	Read    14,000,000 records.  Elapsed time: 00:00:58s.  Time for last 1,000,000:    5s.  Last read position: 1:145,415,561
+INFO	2022-07-21 16:42:11	MarkDuplicates	Tracking 1524249 as yet unmatched pairs. 191165 records in RAM.
+INFO	2022-07-21 16:42:15	MarkDuplicates	Read    15,000,000 records.  Elapsed time: 00:01:01s.  Time for last 1,000,000:    3s.  Last read position: 1:152,080,687
+INFO	2022-07-21 16:42:15	MarkDuplicates	Tracking 1622503 as yet unmatched pairs. 184875 records in RAM.
+INFO	2022-07-21 16:42:19	MarkDuplicates	Read    16,000,000 records.  Elapsed time: 00:01:05s.  Time for last 1,000,000:    3s.  Last read position: 1:155,252,223
+INFO	2022-07-21 16:42:19	MarkDuplicates	Tracking 1706355 as yet unmatched pairs. 179044 records in RAM.
+INFO	2022-07-21 16:42:23	MarkDuplicates	Read    17,000,000 records.  Elapsed time: 00:01:09s.  Time for last 1,000,000:    3s.  Last read position: 1:159,174,621
+INFO	2022-07-21 16:42:23	MarkDuplicates	Tracking 1789834 as yet unmatched pairs. 172436 records in RAM.
+INFO	2022-07-21 16:42:26	MarkDuplicates	Read    18,000,000 records.  Elapsed time: 00:01:12s.  Time for last 1,000,000:    3s.  Last read position: 1:166,958,452
+INFO	2022-07-21 16:42:26	MarkDuplicates	Tracking 1882905 as yet unmatched pairs. 162416 records in RAM.
+INFO	2022-07-21 16:42:30	MarkDuplicates	Read    19,000,000 records.  Elapsed time: 00:01:16s.  Time for last 1,000,000:    3s.  Last read position: 1:180,167,775
+INFO	2022-07-21 16:42:30	MarkDuplicates	Tracking 1979796 as yet unmatched pairs. 146180 records in RAM.
+INFO	2022-07-21 16:42:34	MarkDuplicates	Read    20,000,000 records.  Elapsed time: 00:01:20s.  Time for last 1,000,000:    3s.  Last read position: 1:200,842,811
+INFO	2022-07-21 16:42:34	MarkDuplicates	Tracking 2075555 as yet unmatched pairs. 124890 records in RAM.
+INFO	2022-07-21 16:42:37	MarkDuplicates	Read    21,000,000 records.  Elapsed time: 00:01:24s.  Time for last 1,000,000:    3s.  Last read position: 1:205,113,953
+INFO	2022-07-21 16:42:37	MarkDuplicates	Tracking 2152166 as yet unmatched pairs. 107206 records in RAM.
+INFO	2022-07-21 16:42:41	MarkDuplicates	Read    22,000,000 records.  Elapsed time: 00:01:27s.  Time for last 1,000,000:    3s.  Last read position: 1:215,956,089
+INFO	2022-07-21 16:42:41	MarkDuplicates	Tracking 2232968 as yet unmatched pairs. 83095 records in RAM.
+INFO	2022-07-21 16:42:45	MarkDuplicates	Read    23,000,000 records.  Elapsed time: 00:01:31s.  Time for last 1,000,000:    3s.  Last read position: 1:228,467,435
+INFO	2022-07-21 16:42:45	MarkDuplicates	Tracking 2305892 as yet unmatched pairs. 55809 records in RAM.
+INFO	2022-07-21 16:42:48	MarkDuplicates	Read    24,000,000 records.  Elapsed time: 00:01:35s.  Time for last 1,000,000:    3s.  Last read position: 1:237,801,601
+INFO	2022-07-21 16:42:48	MarkDuplicates	Tracking 2372220 as yet unmatched pairs. 27501 records in RAM.
+INFO	2022-07-21 16:42:57	MarkDuplicates	Read    25,000,000 records.  Elapsed time: 00:01:43s.  Time for last 1,000,000:    8s.  Last read position: 2:5,578,048
+INFO	2022-07-21 16:42:57	MarkDuplicates	Tracking 2443555 as yet unmatched pairs. 203067 records in RAM.
+INFO	2022-07-21 16:43:03	MarkDuplicates	Read    26,000,000 records.  Elapsed time: 00:01:50s.  Time for last 1,000,000:    6s.  Last read position: 3:191,789,047
+INFO	2022-07-21 16:43:03	MarkDuplicates	Tracking 2148305 as yet unmatched pairs. 7423 records in RAM.
+INFO	2022-07-21 16:43:15	MarkDuplicates	Read    27,000,000 records.  Elapsed time: 00:02:01s.  Time for last 1,000,000:   11s.  Last read position: 8:81,800,808
+INFO	2022-07-21 16:43:15	MarkDuplicates	Tracking 1550577 as yet unmatched pairs. 50074 records in RAM.
+INFO	2022-07-21 16:43:26	MarkDuplicates	Read    28,000,000 records.  Elapsed time: 00:02:12s.  Time for last 1,000,000:   10s.  Last read position: 14:64,154,999
+INFO	2022-07-21 16:43:26	MarkDuplicates	Tracking 935897 as yet unmatched pairs. 42556 records in RAM.
+INFO	2022-07-21 16:43:36	MarkDuplicates	Read    29,000,000 records.  Elapsed time: 00:02:23s.  Time for last 1,000,000:   10s.  Last read position: 22:47,827,205
+INFO	2022-07-21 16:43:36	MarkDuplicates	Tracking 304015 as yet unmatched pairs. 5211 records in RAM.
+INFO	2022-07-21 16:43:43	MarkDuplicates	Read 29787494 records. 1 pairs never matched.
+INFO	2022-07-21 16:43:46	MarkDuplicates	After buildSortedReadEndLists freeMemory: 4429946776; totalMemory: 7627927552; maxMemory: 8303607808
+INFO	2022-07-21 16:43:46	MarkDuplicates	Will retain up to 259487744 duplicate indices before spilling to disk.
+INFO	2022-07-21 16:43:46	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2022-07-21 16:43:53	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2022-07-21 16:43:55	MarkDuplicates	Sorting list of duplicate records.
+INFO	2022-07-21 16:43:56	MarkDuplicates	After generateDuplicateIndexes freeMemory: 5243433528; totalMemory: 7627927552; maxMemory: 8303607808
+INFO	2022-07-21 16:43:56	MarkDuplicates	Marking 5637061 records as duplicates.
+INFO	2022-07-21 16:43:56	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2022-07-21 16:43:56	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+INFO	2022-07-21 16:45:34	MarkDuplicates	Written    10,000,000 records.  Elapsed time: 00:01:37s.  Time for last 10,000,000:   97s.  Last read position: 1:54,474,762
+INFO	2022-07-21 16:47:14	MarkDuplicates	Written    20,000,000 records.  Elapsed time: 00:03:17s.  Time for last 10,000,000:  100s.  Last read position: 1:200,842,811
+INFO	2022-07-21 16:49:04	MarkDuplicates	Writing complete. Closing input iterator.
+INFO	2022-07-21 16:49:04	MarkDuplicates	Duplicate Index cleanup.
+INFO	2022-07-21 16:49:04	MarkDuplicates	Getting Memory Stats.
+INFO	2022-07-21 16:49:04	MarkDuplicates	Before output close freeMemory: 7317990552; totalMemory: 7627927552; maxMemory: 8303607808
+INFO	2022-07-21 16:49:04	MarkDuplicates	Closed outputs. Getting more Memory Stats.
+INFO	2022-07-21 16:49:04	MarkDuplicates	After output close freeMemory: 6688249856; totalMemory: 6994718720; maxMemory: 8303607808
+[Thu Jul 21 16:49:04 KST 2022] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 7.86 minutes.
+Runtime.totalMemory()=6994718720
+INFO  16:49:07,575 HelpFormatter - --------------------------------------------------------------------------------- 
+INFO  16:49:07,576 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.4-46-gbc02625, Compiled 2015/07/09 17:38:12 
+INFO  16:49:07,577 HelpFormatter - Copyright (c) 2010 The Broad Institute 
+INFO  16:49:07,577 HelpFormatter - For support and documentation go to http://www.broadinstitute.org/gatk 
+INFO  16:49:07,579 HelpFormatter - Program Args: -T RealignerTargetCreator -R /data/references/b37/human_g1k_v37_decoy.fasta -o WES_B_Normal.sorted.RGadded.marked.bam.list -I WES_B_Normal.sorted.RGadded.marked.bam -dt NONE -nt 8 
+INFO  16:49:07,581 HelpFormatter - Executing as mjcho@compgen on Linux 3.10.0-1160.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01. 
+INFO  16:49:07,593 HelpFormatter - Date/Time: 2022/07/21 16:49:07 
+INFO  16:49:07,593 HelpFormatter - --------------------------------------------------------------------------------- 
+INFO  16:49:07,593 HelpFormatter - --------------------------------------------------------------------------------- 
+INFO  16:49:08,229 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:49:08,327 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  16:49:08,341 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:49:08,362 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.02 
+INFO  16:49:08,383 MicroScheduler - Running the GATK in parallel mode with 8 total threads, 1 CPU thread(s) for each of 8 data thread(s), of 1 processors available on this machine 
+WARN  16:49:08,384 MicroScheduler - Number of requested GATK threads 8 is more than the number of available processors on this machine 1 
+INFO  16:49:08,444 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:49:08,767 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:49:08,767 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:49:08,767 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:49:08,768 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:49:08,818 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:49:08,822 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  16:49:08,859 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:49:08,862 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  16:49:08,890 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:49:08,894 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  16:49:08,900 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:49:08,903 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  16:49:08,904 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:49:08,907 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  16:49:08,913 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:49:08,916 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  16:49:08,933 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:49:08,936 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  16:49:38,770 ProgressMeter -       1:9955589   9830400.0    30.0 s       3.0 s        0.3%     2.6 h       2.6 h 
+INFO  16:50:08,771 ProgressMeter -      1:29234057   2.9114368E7    60.0 s       2.0 s        0.9%   107.3 m     106.3 m 
+INFO  16:50:38,796 ProgressMeter -      1:53236717   5.3116928E7    90.0 s       1.0 s        1.7%    88.4 m      86.9 m 
+INFO  16:51:08,797 ProgressMeter -     1:102098605   1.02039552E8   120.0 s       1.0 s        3.3%    61.5 m      59.5 m 
+INFO  16:51:48,797 ProgressMeter -     1:158478549   1.5835136E8     2.7 m       1.0 s        5.1%    52.8 m      50.1 m 
+INFO  16:52:18,798 ProgressMeter -     1:198674385   1.98557696E8     3.2 m       0.0 s        6.3%    50.0 m      46.8 m 
+INFO  16:52:58,799 ProgressMeter -     1:242128653   2.42106368E8     3.8 m       0.0 s        7.7%    49.7 m      45.8 m 
+INFO  16:53:38,800 ProgressMeter -     2:171491529   4.20741949E8     4.5 m       0.0 s       13.4%    33.6 m      29.1 m 
+INFO  16:54:18,800 ProgressMeter -     3:166169029   6.58616522E8     5.2 m       0.0 s       21.0%    24.6 m      19.4 m 
+INFO  16:54:48,804 ProgressMeter -     4:141901741   8.32357864E8     5.7 m       0.0 s       26.5%    21.4 m      15.7 m 
+INFO  16:55:18,806 ProgressMeter -     5:116887357   9.98493772E8     6.2 m       0.0 s       31.8%    19.4 m      13.2 m 
+INFO  16:55:58,807 ProgressMeter -       7:3342937   1.236999363E9     6.8 m       0.0 s       39.4%    17.3 m      10.5 m 
+INFO  16:56:28,807 ProgressMeter -      8:19005357   1.411784746E9     7.3 m       0.0 s       45.0%    16.3 m       9.0 m 
+INFO  16:56:58,808 ProgressMeter -      9:74416045   1.5953896E9     7.8 m       0.0 s       51.4%    15.2 m       7.4 m 
+INFO  16:57:38,809 ProgressMeter -     11:13789645   1.82967045E9     8.5 m       0.0 s       58.3%    14.6 m       6.1 m 
+INFO  16:58:08,809 ProgressMeter -     12:62599881   2.013501286E9     9.0 m       0.0 s       64.2%    14.0 m       5.0 m 
+INFO  16:58:38,810 ProgressMeter -    13:114552245   2.199159389E9     9.5 m       0.0 s       70.1%    13.6 m       4.1 m 
+INFO  16:59:08,848 ProgressMeter -     15:89411689   2.376688343E9    10.0 m       0.0 s       76.4%    13.1 m       3.1 m 
+INFO  16:59:38,863 ProgressMeter -     17:67698605   2.567854168E9    10.5 m       0.0 s       81.8%    12.8 m       2.3 m 
+INFO  17:00:08,864 ProgressMeter -     20:32367501   2.747835129E9    11.0 m       0.0 s       87.7%    12.5 m      92.0 s 
+INFO  17:00:38,873 ProgressMeter -      X:56349677   2.937377862E9    11.5 m       0.0 s       93.6%    12.3 m      46.0 s 
+INFO  17:01:08,874 ProgressMeter - hs37d5:29643657   3.10143589E9    12.0 m       0.0 s       99.8%    12.0 m       1.0 s 
+INFO  17:01:28,660 ProgressMeter -            done   3.137454505E9    12.3 m       0.0 s      100.0%    12.3 m       0.0 s 
+INFO  17:01:28,661 ProgressMeter - Total runtime 739.89 secs, 12.33 min, 0.21 hours 
+INFO  17:01:28,663 MicroScheduler - 11920580 reads were filtered out during the traversal out of approximately 29949691 total reads (39.80%) 
+INFO  17:01:28,664 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  17:01:28,664 MicroScheduler -   -> 5705010 reads (19.05% of total) failing BadMateFilter 
+INFO  17:01:28,664 MicroScheduler -   -> 4737172 reads (15.82% of total) failing DuplicateReadFilter 
+INFO  17:01:28,664 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  17:01:28,669 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  17:01:28,670 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  17:01:28,670 MicroScheduler -   -> 1478398 reads (4.94% of total) failing MappingQualityZeroFilter 
+INFO  17:01:28,670 MicroScheduler -   -> 0 reads (0.00% of total) failing NotPrimaryAlignmentFilter 
+INFO  17:01:28,670 MicroScheduler -   -> 0 reads (0.00% of total) failing Platform454Filter 
+INFO  17:01:28,670 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+INFO  17:01:30,120 GATKRunReport - Uploaded run statistics report to AWS S3 
+INFO  17:01:32,826 HelpFormatter - --------------------------------------------------------------------------------- 
+INFO  17:01:32,827 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.4-46-gbc02625, Compiled 2015/07/09 17:38:12 
+INFO  17:01:32,827 HelpFormatter - Copyright (c) 2010 The Broad Institute 
+INFO  17:01:32,828 HelpFormatter - For support and documentation go to http://www.broadinstitute.org/gatk 
+INFO  17:01:32,830 HelpFormatter - Program Args: -I WES_B_Normal.sorted.RGadded.marked.bam -R /data/references/b37/human_g1k_v37_decoy.fasta -T IndelRealigner -targetIntervals WES_B_Normal.sorted.RGadded.marked.bam.list -o WES_B_Normal.sorted.RGadded.marked.realigned.bam --maxReadsForRealignment 300000 
+INFO  17:01:32,831 HelpFormatter - Executing as mjcho@compgen on Linux 3.10.0-1160.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01. 
+INFO  17:01:32,832 HelpFormatter - Date/Time: 2022/07/21 17:01:32 
+INFO  17:01:32,832 HelpFormatter - --------------------------------------------------------------------------------- 
+INFO  17:01:32,832 HelpFormatter - --------------------------------------------------------------------------------- 
+INFO  17:01:33,565 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  17:01:33,628 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  17:01:33,634 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  17:01:33,677 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.04 
+INFO  17:01:33,758 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  17:01:33,762 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  17:01:33,765 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  17:01:33,765 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  17:01:33,765 ProgressMeter -        Location |     reads | elapsed |     reads | completed | runtime |   runtime 
+INFO  17:01:33,930 ReadShardBalancer$1 - Loading BAM index data 
+INFO  17:01:33,931 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  17:02:04,287 ProgressMeter -       1:1354692    500023.0    30.0 s      61.0 s        0.0%    19.3 h      19.3 h 
+INFO  17:03:04,289 ProgressMeter -       1:7243190   1800071.0    90.0 s      50.0 s        0.2%    10.8 h      10.8 h 
+INFO  17:03:34,289 ProgressMeter -      1:10478949   2300088.0   120.0 s      52.0 s        0.3%    10.0 h       9.9 h 
+INFO  17:04:04,290 ProgressMeter -      1:14107602   3000110.0     2.5 m      50.0 s        0.4%     9.3 h       9.2 h 
+INFO  17:04:44,291 ProgressMeter -      1:19982023   4100170.0     3.2 m      46.0 s        0.6%     8.3 h       8.2 h 
+INFO  17:05:14,291 ProgressMeter -      1:24086518   4900189.0     3.7 m      45.0 s        0.8%     8.0 h       7.9 h 
+INFO  17:05:44,292 ProgressMeter -      1:27107739   5600220.0     4.2 m      44.0 s        0.9%     8.0 h       8.0 h 
+INFO  17:06:14,433 ProgressMeter -      1:29475768   6100238.0     4.7 m      46.0 s        0.9%     8.3 h       8.2 h 
+INFO  17:06:44,665 ProgressMeter -      1:33333342   6800273.0     5.2 m      45.0 s        1.1%     8.1 h       8.0 h 
+INFO  17:07:24,666 ProgressMeter -      1:38226881   7600303.0     5.8 m      46.0 s        1.2%     8.0 h       7.9 h 
+INFO  17:07:54,699 ProgressMeter -      1:43632580   8300324.0     6.3 m      45.0 s        1.4%     7.6 h       7.5 h 
+INFO  17:08:25,634 ProgressMeter -      1:46872026   9200348.0     6.9 m      44.0 s        1.5%     7.6 h       7.5 h 
+INFO  17:08:55,654 ProgressMeter -      1:53535969   9800362.0     7.4 m      45.0 s        1.7%     7.2 h       7.1 h 
+INFO  17:09:25,657 ProgressMeter -      1:63336834   1.0500373E7     7.9 m      44.0 s        2.0%     6.5 h       6.4 h 
+INFO  17:09:56,136 ProgressMeter -      1:86119564   1.1500399E7     8.4 m      43.0 s        2.7%     5.1 h       4.9 h 
+INFO  17:10:26,171 ProgressMeter -     1:109643209   1.240044E7     8.9 m      42.0 s        3.5%     4.2 h       4.1 h 
+INFO  17:10:56,172 ProgressMeter -     1:112269622   1.3000459E7     9.4 m      43.0 s        3.6%     4.4 h       4.2 h 
+INFO  17:11:36,173 ProgressMeter -     1:147007837   1.4100498E7    10.0 m      42.0 s        4.7%     3.6 h       3.4 h 
+INFO  17:12:06,173 ProgressMeter -     1:151142169   1.4700508E7    10.5 m      43.0 s        4.8%     3.6 h       3.5 h 
+INFO  17:12:36,174 ProgressMeter -     1:153921045   1.5400523E7    11.0 m      43.0 s        4.9%     3.7 h       3.6 h 
+INFO  17:13:06,183 ProgressMeter -     1:155265569   1.6000536E7    11.5 m      43.0 s        4.9%     3.9 h       3.7 h 
+INFO  17:13:46,184 ProgressMeter -     1:156884722   1.6700571E7    12.2 m      43.0 s        5.0%     4.1 h       3.9 h 
+INFO  17:14:26,185 ProgressMeter -     1:160313705   1.7200622E7    12.9 m      44.0 s        5.1%     4.2 h       4.0 h 
+INFO  17:14:56,186 ProgressMeter -     1:168105584   1.8100648E7    13.4 m      44.0 s        5.4%     4.2 h       3.9 h 
+INFO  17:15:26,186 ProgressMeter -     1:181479883   1.9100663E7    13.9 m      43.0 s        5.8%     4.0 h       3.8 h 
+INFO  17:15:56,187 ProgressMeter -     1:201123487   2.000068E7    14.4 m      43.0 s        6.4%     3.7 h       3.5 h 
+INFO  17:16:36,187 ProgressMeter -     1:204991753   2.0900714E7    15.0 m      43.0 s        6.5%     3.8 h       3.6 h 
+INFO  17:17:06,188 ProgressMeter -     1:210412941   2.1600755E7    15.5 m      43.0 s        6.7%     3.9 h       3.6 h 
+INFO  17:17:36,189 ProgressMeter -     1:224492624   2.2400777E7    16.0 m      42.0 s        7.2%     3.7 h       3.5 h 
+INFO  17:18:16,190 ProgressMeter -     1:229386099   2.3200829E7    16.7 m      43.0 s        7.3%     3.8 h       3.5 h 
+INFO  17:18:46,190 ProgressMeter -     1:240075657   2.4000844E7    17.2 m      43.0 s        7.7%     3.7 h       3.5 h 
+INFO  17:19:16,191 ProgressMeter -       2:1637188   2.4789777E7    17.7 m      42.0 s        8.0%     3.7 h       3.4 h 
+INFO  17:19:56,192 ProgressMeter -      3:96286966   2.5860012E7    18.4 m      42.0 s       18.8%    97.9 m      79.5 m 
+INFO  17:20:36,193 ProgressMeter -     13:82446456   2.7836517E7    19.0 m      41.0 s       69.1%    27.6 m       8.5 m 
+INFO  17:21:06,577 ProgressMeter - hs37d5:19353771   2.9381129E7    19.5 m      39.0 s       99.5%    19.6 m       6.0 s 
+INFO  17:21:16,801 ProgressMeter -            done   2.9787494E7    19.7 m      39.0 s      100.0%    19.7 m       0.0 s 
+INFO  17:21:16,801 ProgressMeter - Total runtime 1183.04 secs, 19.72 min, 0.33 hours 
+INFO  17:21:16,803 MicroScheduler - 0 reads were filtered out during the traversal out of approximately 29787494 total reads (0.00%) 
+INFO  17:21:16,804 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  17:21:16,804 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  17:21:18,403 GATKRunReport - Uploaded run statistics report to AWS S3 
+INFO	2022-07-21 17:21:19	FixMateInformation	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    FixMateInformation -INPUT WES_B_Normal.sorted.RGadded.marked.realigned.bam -OUTPUT WES_B_Normal.sorted.RGadded.marked.realigned.fixed.bam -SO coordinate -VALIDATION_STRINGENCY LENIENT -CREATE_INDEX true
+**********
+
+
+17:21:19.724 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/opt/biogrids/x86_64-linux/picard/2.26.10/bin/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+[Thu Jul 21 17:21:19 KST 2022] FixMateInformation INPUT=[WES_B_Normal.sorted.RGadded.marked.realigned.bam] OUTPUT=WES_B_Normal.sorted.RGadded.marked.realigned.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true    ASSUME_SORTED=false ADD_MATE_CIGAR=true IGNORE_MISSING_MATES=true VERBOSITY=INFO QUIET=false COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Thu Jul 21 17:21:19 KST 2022] Executing as mjcho@compgen on Linux 3.10.0-1160.el7.x86_64 amd64; OpenJDK 64-Bit Server VM 12.0.2+3; Deflater: Intel; Inflater: Intel; Provider GCS is not available; Picard version: 2.26.10
+INFO	2022-07-21 17:21:19	FixMateInformation	Sorting input into queryname order.
+INFO	2022-07-21 17:23:52	FixMateInformation	Sorting by queryname complete.
+INFO	2022-07-21 17:23:52	FixMateInformation	Output will be sorted by coordinate
+INFO	2022-07-21 17:23:52	FixMateInformation	Traversing query name sorted records and fixing up mate pair information.
+INFO	2022-07-21 17:23:52	FixMateInformation	Seen many non-increasing record positions. Printing Read-names as well.
+INFO	2022-07-21 17:23:57	FixMateInformation	Processed     1,000,000 records.  Elapsed time: 00:00:05s.  Time for last 1,000,000:    5s.  Last read position: 1:186,344,522.  Last read name: FCD_unknown.10405027
+INFO	2022-07-21 17:24:04	FixMateInformation	Processed     2,000,000 records.  Elapsed time: 00:00:11s.  Time for last 1,000,000:    6s.  Last read position: 1:202,097,331.  Last read name: FCD_unknown.10810247
+INFO	2022-07-21 17:24:10	FixMateInformation	Processed     3,000,000 records.  Elapsed time: 00:00:18s.  Time for last 1,000,000:    6s.  Last read position: 19:40,745,994.  Last read name: FCD_unknown.1121852
+INFO	2022-07-21 17:24:16	FixMateInformation	Processed     4,000,000 records.  Elapsed time: 00:00:24s.  Time for last 1,000,000:    5s.  Last read position: 7:87,737,208.  Last read name: FCD_unknown.11624856
+INFO	2022-07-21 17:24:23	FixMateInformation	Processed     5,000,000 records.  Elapsed time: 00:00:31s.  Time for last 1,000,000:    7s.  Last read position: 1:226,589,959.  Last read name: FCD_unknown.12029815
+INFO	2022-07-21 17:24:30	FixMateInformation	Processed     6,000,000 records.  Elapsed time: 00:00:37s.  Time for last 1,000,000:    6s.  Last read position: 1:231,356,355.  Last read name: FCD_unknown.12445315
+INFO	2022-07-21 17:24:35	FixMateInformation	Processed     7,000,000 records.  Elapsed time: 00:00:43s.  Time for last 1,000,000:    5s.  Last read position: 1:242,689,448.  Last read name: FCD_unknown.12851928
+INFO	2022-07-21 17:24:42	FixMateInformation	Processed     8,000,000 records.  Elapsed time: 00:00:50s.  Time for last 1,000,000:    7s.  Last read position: 2:3,910,440.  Last read name: FCD_unknown.13261091
+INFO	2022-07-21 17:24:48	FixMateInformation	Processed     9,000,000 records.  Elapsed time: 00:00:56s.  Time for last 1,000,000:    6s.  Last read position: 1:12,579,315.  Last read name: FCD_unknown.1507636
+INFO	2022-07-21 17:24:54	FixMateInformation	Processed    10,000,000 records.  Elapsed time: 00:01:02s.  Time for last 1,000,000:    5s.  Last read position: 1:17,549,861.  Last read name: FCD_unknown.1921645
+INFO	2022-07-21 17:25:00	FixMateInformation	Processed    11,000,000 records.  Elapsed time: 00:01:08s.  Time for last 1,000,000:    6s.  Last read position: 1:25,238,534.  Last read name: FCD_unknown.2335435
+INFO	2022-07-21 17:25:07	FixMateInformation	Processed    12,000,000 records.  Elapsed time: 00:01:14s.  Time for last 1,000,000:    6s.  Last read position: 1:26,226,976.  Last read name: FCD_unknown.2747203
+INFO	2022-07-21 17:25:12	FixMateInformation	Processed    13,000,000 records.  Elapsed time: 00:01:20s.  Time for last 1,000,000:    5s.  Last read position: 1:15,419,157.  Last read name: FCD_unknown.3160383
+INFO	2022-07-21 17:25:20	FixMateInformation	Processed    14,000,000 records.  Elapsed time: 00:01:27s.  Time for last 1,000,000:    7s.  Last read position: 1:33,765,423.  Last read name: FCD_unknown.3571088
+INFO	2022-07-21 17:25:26	FixMateInformation	Processed    15,000,000 records.  Elapsed time: 00:01:34s.  Time for last 1,000,000:    6s.  Last read position: 1:17,027,238.  Last read name: FCD_unknown.3980405
+INFO	2022-07-21 17:25:32	FixMateInformation	Processed    16,000,000 records.  Elapsed time: 00:01:40s.  Time for last 1,000,000:    6s.  Last read position: 3:85,008,527.  Last read name: FCD_unknown.4390695
+INFO	2022-07-21 17:25:37	FixMateInformation	Processed    17,000,000 records.  Elapsed time: 00:01:45s.  Time for last 1,000,000:    5s.  Last read position: 1:47,080,902.  Last read name: FCD_unknown.4802725
+INFO	2022-07-21 17:25:44	FixMateInformation	Processed    18,000,000 records.  Elapsed time: 00:01:51s.  Time for last 1,000,000:    6s.  Last read position: 1:54,940,677.  Last read name: FCD_unknown.5210332
+INFO	2022-07-21 17:25:50	FixMateInformation	Processed    19,000,000 records.  Elapsed time: 00:01:58s.  Time for last 1,000,000:    6s.  Last read position: 1:67,695,570.  Last read name: FCD_unknown.5616392
+INFO	2022-07-21 17:25:56	FixMateInformation	Processed    20,000,000 records.  Elapsed time: 00:02:03s.  Time for last 1,000,000:    5s.  Last read position: 22:47,549,778.  Last read name: FCD_unknown.6017000
+INFO	2022-07-21 17:26:02	FixMateInformation	Processed    21,000,000 records.  Elapsed time: 00:02:09s.  Time for last 1,000,000:    6s.  Last read position: 1:106,839,344.  Last read name: FCD_unknown.6419546
+INFO	2022-07-21 17:26:08	FixMateInformation	Processed    22,000,000 records.  Elapsed time: 00:02:16s.  Time for last 1,000,000:    6s.  Last read position: 1:3,730,849.  Last read name: FCD_unknown.682939
+INFO	2022-07-21 17:26:14	FixMateInformation	Processed    23,000,000 records.  Elapsed time: 00:02:22s.  Time for last 1,000,000:    6s.  Last read position: hs37d5:30,001,857.  Last read name: FCD_unknown.7236341
+INFO	2022-07-21 17:26:21	FixMateInformation	Processed    24,000,000 records.  Elapsed time: 00:02:29s.  Time for last 1,000,000:    6s.  Last read position: 1:149,895,543.  Last read name: FCD_unknown.7645536
+INFO	2022-07-21 17:26:27	FixMateInformation	Processed    25,000,000 records.  Elapsed time: 00:02:35s.  Time for last 1,000,000:    6s.  Last read position: 1:152,322,552.  Last read name: FCD_unknown.8053710
+INFO	2022-07-21 17:26:33	FixMateInformation	Processed    26,000,000 records.  Elapsed time: 00:02:41s.  Time for last 1,000,000:    6s.  Last read position: 1:155,110,075.  Last read name: FCD_unknown.8462019
+INFO	2022-07-21 17:26:39	FixMateInformation	Processed    27,000,000 records.  Elapsed time: 00:02:47s.  Time for last 1,000,000:    6s.  Last read position: 1:156,879,465.  Last read name: FCD_unknown.8874252
+INFO	2022-07-21 17:26:46	FixMateInformation	Processed    28,000,000 records.  Elapsed time: 00:02:53s.  Time for last 1,000,000:    6s.  Last read position: 4:4,431,263.  Last read name: FCD_unknown.9279801
+INFO	2022-07-21 17:26:52	FixMateInformation	Processed    29,000,000 records.  Elapsed time: 00:02:59s.  Time for last 1,000,000:    6s.  Last read position: 1:169,454,990.  Last read name: FCD_unknown.9683487
+INFO	2022-07-21 17:26:58	FixMateInformation	Finished processing reads; re-sorting output file.
+[Thu Jul 21 17:31:07 KST 2022] picard.sam.FixMateInformation done. Elapsed time: 9.80 minutes.
+Runtime.totalMemory()=936181760
+INFO  17:31:09,961 HelpFormatter - --------------------------------------------------------------------------------- 
+INFO  17:31:09,962 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.4-46-gbc02625, Compiled 2015/07/09 17:38:12 
+INFO  17:31:09,963 HelpFormatter - Copyright (c) 2010 The Broad Institute 
+INFO  17:31:09,963 HelpFormatter - For support and documentation go to http://www.broadinstitute.org/gatk 
+INFO  17:31:09,965 HelpFormatter - Program Args: -T BaseRecalibrator -R /data/references/b37/human_g1k_v37_decoy.fasta -I WES_B_Normal.sorted.RGadded.marked.realigned.fixed.bam --knownSites /data/references/b37/dbsnp_147_b37_common_all_20160601.vcf -o WES_B_Normal.sorted.RGadded.marked.realigned.fixed.bam.recal_data.grp 
+INFO  17:31:09,967 HelpFormatter - Executing as mjcho@compgen on Linux 3.10.0-1160.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01. 
+INFO  17:31:09,980 HelpFormatter - Date/Time: 2022/07/21 17:31:09 
+INFO  17:31:09,980 HelpFormatter - --------------------------------------------------------------------------------- 
+INFO  17:31:09,981 HelpFormatter - --------------------------------------------------------------------------------- 
+INFO  17:31:10,684 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  17:31:10,768 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  17:31:10,772 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  17:31:10,827 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.06 
+INFO  17:31:11,057 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  17:31:11,062 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  17:31:11,064 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  17:31:11,064 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  17:31:11,064 ProgressMeter -        Location |     reads | elapsed |     reads | completed | runtime |   runtime 
+INFO  17:31:11,083 BaseRecalibrator - The covariates being used here:  
+INFO  17:31:11,083 BaseRecalibrator - 	ReadGroupCovariate 
+INFO  17:31:11,084 BaseRecalibrator - 	QualityScoreCovariate 
+INFO  17:31:11,084 BaseRecalibrator - 	ContextCovariate 
+INFO  17:31:11,084 ContextCovariate - 		Context sizes: base substitution model 2, indel substitution model 3 
+INFO  17:31:11,084 BaseRecalibrator - 	CycleCovariate 
+INFO  17:31:11,085 ReadShardBalancer$1 - Loading BAM index data 
+INFO  17:31:11,086 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  17:31:41,195 ProgressMeter -       1:1565019    500027.0    30.0 s      60.0 s        0.0%    16.7 h      16.7 h 
+INFO  17:32:41,257 ProgressMeter -      1:10683234   1800062.0    90.0 s      50.0 s        0.3%     7.3 h       7.3 h 
+INFO  17:33:11,258 ProgressMeter -      1:16074196   2500088.0   120.0 s      48.0 s        0.5%     6.5 h       6.5 h 
+INFO  17:33:51,259 ProgressMeter -      1:21924844   3400111.0     2.7 m      47.0 s        0.7%     6.4 h       6.3 h 
+INFO  17:34:21,259 ProgressMeter -      1:26349542   4100132.0     3.2 m      46.0 s        0.8%     6.3 h       6.2 h 
+INFO  17:34:51,260 ProgressMeter -      1:29843517   4800148.0     3.7 m      45.0 s        1.0%     6.4 h       6.4 h 
+INFO  17:35:21,261 ProgressMeter -      1:36032266   5500163.0     4.2 m      45.0 s        1.1%     6.0 h       6.0 h 
+INFO  17:36:01,880 ProgressMeter -      1:43296758   6500193.0     4.8 m      44.0 s        1.4%     5.8 h       5.8 h 
+INFO  17:36:31,881 ProgressMeter -      1:47282777   7200213.0     5.3 m      44.0 s        1.5%     5.9 h       5.8 h 
+INFO  17:37:11,882 ProgressMeter -      1:61928083   8100226.0     6.0 m      44.0 s        2.0%     5.1 h       5.0 h 
+INFO  17:37:42,233 ProgressMeter -      1:80529229   8800241.0     6.5 m      44.0 s        2.6%     4.2 h       4.1 h 
+INFO  17:38:12,412 ProgressMeter -     1:100155322   9400262.0     7.0 m      44.0 s        3.2%     3.7 h       3.5 h 
+INFO  17:38:42,416 ProgressMeter -     1:112052030   1.0200283E7     7.5 m      44.0 s        3.6%     3.5 h       3.4 h 
+INFO  17:39:12,416 ProgressMeter -     1:145076100   1.0800312E7     8.0 m      44.0 s        4.6%     2.9 h       2.8 h 
+INFO  17:39:42,417 ProgressMeter -     1:151670749   1.1600375E7     8.5 m      44.0 s        4.8%     2.9 h       2.8 h 
+INFO  17:40:12,446 ProgressMeter -     1:155028873   1.23004E7     9.0 m      44.0 s        4.9%     3.0 h       2.9 h 
+INFO  17:40:52,447 ProgressMeter -     1:159850420   1.320044E7     9.7 m      44.0 s        5.1%     3.2 h       3.0 h 
+INFO  17:41:22,674 ProgressMeter -     1:166958777   1.4000463E7    10.2 m      43.0 s        5.3%     3.2 h       3.0 h 
+INFO  17:41:53,049 ProgressMeter -     1:179322973   1.470048E7    10.7 m      43.0 s        5.7%     3.1 h       2.9 h 
+INFO  17:42:23,796 ProgressMeter -     1:196248348   1.5300491E7    11.2 m      43.0 s        6.3%     3.0 h       2.8 h 
+INFO  17:42:53,828 ProgressMeter -     1:203673099   1.6100505E7    11.7 m      43.0 s        6.5%     3.0 h       2.8 h 
+INFO  17:43:23,853 ProgressMeter -     1:209960616   1.6800517E7    12.2 m      43.0 s        6.7%     3.0 h       2.8 h 
+INFO  17:43:53,854 ProgressMeter -     1:224565496   1.7500532E7    12.7 m      43.0 s        7.2%     3.0 h       2.7 h 
+INFO  17:44:24,536 ProgressMeter -     1:230916268   1.8200539E7    13.2 m      43.0 s        7.4%     3.0 h       2.8 h 
+INFO  17:44:54,641 ProgressMeter -     1:243666823   1.8800552E7    13.7 m      43.0 s        7.8%     2.9 h       2.7 h 
+INFO  17:45:24,753 ProgressMeter -       2:7170397   1.9547971E7    14.2 m      43.0 s        8.2%     2.9 h       2.7 h 
+INFO  17:45:54,754 ProgressMeter -     2:229880844   1.9947978E7    14.7 m      44.0 s       15.3%    96.4 m      81.7 m 
+INFO  17:46:24,772 ProgressMeter -     4:119952244   2.0253916E7    15.2 m      45.0 s       25.8%    58.9 m      43.7 m 
+INFO  17:46:54,773 ProgressMeter -      6:31926414   2.0569378E7    15.7 m      45.0 s       34.9%    45.1 m      29.3 m 
+INFO  17:47:25,598 ProgressMeter -     7:159089947   2.0831828E7    16.2 m      46.0 s       44.4%    36.6 m      20.3 m 
+INFO  17:47:55,633 ProgressMeter -     10:93984033   2.1150245E7    16.7 m      47.0 s       56.6%    29.6 m      12.9 m 
+INFO  17:48:25,694 ProgressMeter -    12:105059613   2.1440314E7    17.2 m      48.0 s       65.5%    26.3 m       9.1 m 
+INFO  17:48:55,750 ProgressMeter -    15:102360081   2.1752449E7    17.7 m      48.0 s       76.8%    23.1 m       5.4 m 
+INFO  17:49:25,751 ProgressMeter -     19:15572323   2.2142718E7    18.2 m      49.0 s       85.3%    21.4 m       3.2 m 
+INFO  17:49:55,929 ProgressMeter -     X:114940671   2.2432877E7    18.7 m      50.0 s       95.5%    19.6 m      53.0 s 
+INFO  17:50:06,816 BaseRecalibrator - Calculating quantized quality scores... 
+INFO  17:50:06,861 BaseRecalibrator - Writing recalibration report... 
+INFO  17:50:08,202 BaseRecalibrator - ...done! 
+INFO  17:50:08,203 BaseRecalibrator - BaseRecalibrator was able to recalibrate 22737051 reads 
+INFO  17:50:08,204 ProgressMeter -            done   2.2737051E7    19.0 m      50.0 s      100.0%    19.0 m       0.0 s 
+INFO  17:50:08,204 ProgressMeter - Total runtime 1137.14 secs, 18.95 min, 0.32 hours 
+INFO  17:50:08,204 MicroScheduler - 7050443 reads were filtered out during the traversal out of approximately 29787494 total reads (23.67%) 
+INFO  17:50:08,204 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  17:50:08,204 MicroScheduler -   -> 5577277 reads (18.72% of total) failing DuplicateReadFilter 
+INFO  17:50:08,204 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  17:50:08,204 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  17:50:08,204 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  17:50:08,204 MicroScheduler -   -> 1473166 reads (4.95% of total) failing MappingQualityZeroFilter 
+INFO  17:50:08,205 MicroScheduler -   -> 0 reads (0.00% of total) failing NotPrimaryAlignmentFilter 
+INFO  17:50:08,205 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+INFO  17:50:09,869 GATKRunReport - Uploaded run statistics report to AWS S3 
+INFO  17:50:12,130 HelpFormatter - --------------------------------------------------------------------------------- 
+INFO  17:50:12,132 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.4-46-gbc02625, Compiled 2015/07/09 17:38:12 
+INFO  17:50:12,132 HelpFormatter - Copyright (c) 2010 The Broad Institute 
+INFO  17:50:12,133 HelpFormatter - For support and documentation go to http://www.broadinstitute.org/gatk 
+INFO  17:50:12,135 HelpFormatter - Program Args: -T PrintReads -R /data/references/b37/human_g1k_v37_decoy.fasta -I WES_B_Normal.sorted.RGadded.marked.realigned.fixed.bam -BQSR WES_B_Normal.recal_data.grp -o WES_B_Normal.sorted.RGadded.marked.realigend.fixed.recal.bam 
+INFO  17:50:12,137 HelpFormatter - Executing as mjcho@compgen on Linux 3.10.0-1160.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01. 
+INFO  17:50:12,137 HelpFormatter - Date/Time: 2022/07/21 17:50:12 
+INFO  17:50:12,137 HelpFormatter - --------------------------------------------------------------------------------- 
+INFO  17:50:12,138 HelpFormatter - --------------------------------------------------------------------------------- 
+INFO  17:50:12,905 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  17:50:14,456 GATKRunReport - Uploaded run statistics report to AWS S3 
+##### ERROR ------------------------------------------------------------------------------------------
+##### ERROR A USER ERROR has occurred (version 3.4-46-gbc02625): 
+##### ERROR
+##### ERROR This means that one or more arguments or inputs in your command are incorrect.
+##### ERROR The error message below tells you what is the problem.
+##### ERROR
+##### ERROR If the problem is an invalid argument, please check the online documentation guide
+##### ERROR (or rerun your command with --help) to view allowable command-line arguments for this tool.
+##### ERROR
+##### ERROR Visit our website and forum for extensive documentation and answers to 
+##### ERROR commonly asked questions http://www.broadinstitute.org/gatk
+##### ERROR
+##### ERROR Please do NOT post this error to the GATK forum unless you have really tried to fix it yourself.
+##### ERROR
+##### ERROR MESSAGE: Couldn't read file /scratch/2022_summer_internship/mjcho/FCD_project/preprocessing/WES_B_Normal.recal_data.grp because it does not exist
+##### ERROR ------------------------------------------------------------------------------------------

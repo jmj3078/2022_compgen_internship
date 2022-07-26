@@ -17,8 +17,8 @@ def dataframe_diff_by_col(df1, df2, which="both"):
 
 
 def get_annov_and_ans():
-    path_annov = input(print("input file path of annov.txt file: "))
-    path_ans = input(print("input file path of ans.txt file: "))
+    path_annov = input("input file path of annov.txt file: ")
+    path_ans = input("input file path of ans.txt file: ")
 
     annov = pd.read_table(path_annov)
     ans = pd.read_table(path_ans)
