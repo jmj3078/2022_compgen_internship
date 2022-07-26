@@ -1,0 +1,4 @@
+[2022-07-26T06:47:24.643420Z] [compgen] [30016_1] [pyflowTaskWrapper:CallGenome+callGenomeSegment_chromId_007_8_0001] [wrapperSignal] wrapperStart
+[2022-07-26T06:47:24.906034Z] [compgen] [30016_1] [pyflowTaskWrapper:CallGenome+callGenomeSegment_chromId_007_8_0001] [wrapperSignal] taskStart
+[2022-07-26T06:53:45.384374Z] [compgen] [30016_1] [pyflowTaskWrapper:CallGenome+callGenomeSegment_chromId_007_8_0001] [wrapperSignal] taskExitCode 0
+[2022-07-26T06:53:45.384737Z] [compgen] [30016_1] [pyflowTaskWrapper:CallGenome+callGenomeSegment_chromId_007_8_0001] [wrapperSignal] taskElapsedSec 380

@@ -1,0 +1,26 @@
+(dp0
+S'isShellCmd'
+p1
+I01
+sS'cmd'
+p2
+S'"/usr/bin/python" -E "/opt/biogrids/x86_64-linux/strelka/2.9.2/libexec/vcfCmdlineSwapper.py" "/opt/biogrids/x86_64-linux/strelka/2.9.2/bin/configureStrelkaSomaticWorkflow.py --normalBam ./bam/WES_A_Normal.sorted.RGadded.marked.realigned.fixed.recal.bam --tumorBam ./bam/WES_A_Disease.sorted.RGadded.marked.realigned.fixed.recal.bam --referenceFasta /data/references/b37/human_g1k_v37_decoy.fasta --callRegions ./bed/wes.bed.gz --runDir ./WES_A_strelka" < "/scratch/2022_summer_internship/mjcho/FCD_project/WES_A_strelka/workspace/genomeSegment.tmpdir/somatic.snvs.unfiltered.chromId_000_1_0000.vcf" > "/scratch/2022_summer_internship/mjcho/FCD_project/WES_A_strelka/workspace/genomeSegment.tmpdir/somatic.snvs.unfiltered.chromId_000_1_0000.vcf.reheader.tmp" && mv "/scratch/2022_summer_internship/mjcho/FCD_project/WES_A_strelka/workspace/genomeSegment.tmpdir/somatic.snvs.unfiltered.chromId_000_1_0000.vcf.reheader.tmp" "/scratch/2022_summer_internship/mjcho/FCD_project/WES_A_strelka/workspace/genomeSegment.tmpdir/somatic.snvs.unfiltered.chromId_000_1_0000.vcf" && "/usr/bin/python" -E "/opt/biogrids/x86_64-linux/strelka/2.9.2/libexec/vcfCmdlineSwapper.py" "/opt/biogrids/x86_64-linux/strelka/2.9.2/bin/configureStrelkaSomaticWorkflow.py --normalBam ./bam/WES_A_Normal.sorted.RGadded.marked.realigned.fixed.recal.bam --tumorBam ./bam/WES_A_Disease.sorted.RGadded.marked.realigned.fixed.recal.bam --referenceFasta /data/references/b37/human_g1k_v37_decoy.fasta --callRegions ./bed/wes.bed.gz --runDir ./WES_A_strelka" < "/scratch/2022_summer_internship/mjcho/FCD_project/WES_A_strelka/workspace/genomeSegment.tmpdir/somatic.indels.unfiltered.chromId_000_1_0000.vcf" > "/scratch/2022_summer_internship/mjcho/FCD_project/WES_A_strelka/workspace/genomeSegment.tmpdir/somatic.indels.unfiltered.chromId_000_1_0000.vcf.reheader.tmp" && mv "/scratch/2022_summer_internship/mjcho/FCD_project/WES_A_strelka/workspace/genomeSegment.tmpdir/somatic.indels.unfiltered.chromId_000_1_0000.vcf.reheader.tmp" "/scratch/2022_summer_internship/mjcho/FCD_project/WES_A_strelka/workspace/genomeSegment.tmpdir/somatic.indels.unfiltered.chromId_000_1_0000.vcf"'
+p3
+sS'errFile'
+p4
+S'/scratch/2022_summer_internship/mjcho/FCD_project/WES_A_strelka/workspace/pyflow.data/logs/pyflow_tasks_stderr_log.txt'
+p5
+sS'outFile'
+p6
+S'/scratch/2022_summer_internship/mjcho/FCD_project/WES_A_strelka/workspace/pyflow.data/logs/pyflow_tasks_stdout_log.txt'
+p7
+sS'env'
+p8
+NsS'nCores'
+p9
+I1
+sS'cwd'
+p10
+S''
+p11
+s.

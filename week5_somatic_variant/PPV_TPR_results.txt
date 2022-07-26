@@ -1,0 +1,11 @@
+results : amp
+PPV: 0.273
+TPR: 0.196         
+FPV: 0.727
+FPR: 0.804
+
+results : HC
+PPV: 0.949
+TPR: 0.255         
+FPV: 0.051
+FPR: 0.745

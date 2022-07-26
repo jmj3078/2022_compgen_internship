@@ -1,0 +1,25 @@
+[mpileup] 1 samples in 1 input files
+[mpileup] 1 samples in 1 input files
+Normal Pileup: ../bam/Targeted_C_Normal.mpileup
+Tumor Pileup: ../bam/Targeted_C_Disease.mpileup
+NOTICE: While dual input files are still supported, using a single mpileup file (normal-tumor) with the --mpileup 1 setting is strongly recommended.
+Min coverage:	8x for Normal, 6x for Tumor
+Min reads2:	2
+Min strands2:	1
+Min var freq:	0.2
+Min freq for hom:	0.75
+Normal purity:	1.0
+Tumor purity:	1.0
+Min avg qual:	15
+P-value thresh:	0.99
+Somatic p-value:	0.05
+87950100 positions in tumor
+87034910 positions shared in normal
+2230218 had sufficient coverage for comparison
+2224911 were called Reference
+0 were mixed SNP-indel calls and filtered
+4926 were called Germline
+126 were called LOH
+253 were called Somatic
+2 were called Unknown
+0 were called Variant

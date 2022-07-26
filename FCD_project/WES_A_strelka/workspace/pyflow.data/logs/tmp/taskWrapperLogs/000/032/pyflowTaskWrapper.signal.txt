@@ -1,0 +1,4 @@
+[2022-07-26T06:38:48.179085Z] [compgen] [29748_1] [pyflowTaskWrapper:CallGenome+fixVcfHeader_chromId_000_1_0000] [wrapperSignal] wrapperStart
+[2022-07-26T06:38:48.371110Z] [compgen] [29748_1] [pyflowTaskWrapper:CallGenome+fixVcfHeader_chromId_000_1_0000] [wrapperSignal] taskStart
+[2022-07-26T06:38:49.118482Z] [compgen] [29748_1] [pyflowTaskWrapper:CallGenome+fixVcfHeader_chromId_000_1_0000] [wrapperSignal] taskExitCode 0
+[2022-07-26T06:38:49.118885Z] [compgen] [29748_1] [pyflowTaskWrapper:CallGenome+fixVcfHeader_chromId_000_1_0000] [wrapperSignal] taskElapsedSec 0

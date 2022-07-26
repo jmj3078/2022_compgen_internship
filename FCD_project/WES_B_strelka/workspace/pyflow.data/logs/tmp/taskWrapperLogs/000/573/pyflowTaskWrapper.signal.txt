@@ -1,0 +1,4 @@
+[2022-07-26T06:57:01.100137Z] [compgen] [30016_1] [pyflowTaskWrapper:CallGenome+SNV_concat_vcf] [wrapperSignal] wrapperStart
+[2022-07-26T06:57:01.106095Z] [compgen] [30016_1] [pyflowTaskWrapper:CallGenome+SNV_concat_vcf] [wrapperSignal] taskStart
+[2022-07-26T06:57:01.209125Z] [compgen] [30016_1] [pyflowTaskWrapper:CallGenome+SNV_concat_vcf] [wrapperSignal] taskExitCode 0
+[2022-07-26T06:57:01.210573Z] [compgen] [30016_1] [pyflowTaskWrapper:CallGenome+SNV_concat_vcf] [wrapperSignal] taskElapsedSec 0

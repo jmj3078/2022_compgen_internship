@@ -1,0 +1,14 @@
+sbatch mutect2_call.sh ../bam/1C_HC.bam ../bam/1F_HC.bam 1C_HC/1C_HC.bam 1F_HC/1F_HC.bam HC ../bed/total.merged.bed 
+sbatch mutect2_call.sh ../bam/1C_amp.bam ../bam/1F_amp.bam 1C_amp/1C_amp.bam 1F_amp/1F_amp.bam amp ../bed/total.merged.bed
+
+sbatch ./mutect2_filter.sh HC.somatic.vcf.gz HC.filtered.somatic.vcf.gz ./bed/total.merged.bed
+sbatch ./mutect2_filter.sh amp.somatic.vcf.gz amp.filtered.somatic.vcf.gz ./bed/total.merged.bed 
+
+/opt/tools/annovar/convert2annovar.pl -format vcf4 HC.filtered.somatic.vcf.gz > HC.avinput
+/opt/tools/annovar/convert2annovar.pl -format vcf4 amp.filtered.somatic.vcf.gz > amp.avinput
+
+sbatch run_annovar.sh HC
+sbatch run_annovar.sh amp
+
+printf "application_example/amp.annovar.hg19_multianno.txt\nanswer_amp.txt\n" | python cal_PPV_and_TPR.py 
+printf "application_example/HC.annovar.hg19_multianno.txt\nanswer_HC.txt\n" | python cal_PPV_and_TPR.py 

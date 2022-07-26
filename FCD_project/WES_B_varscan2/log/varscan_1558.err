@@ -1,0 +1,26 @@
+[E::hts_open_format] Failed to open file "../bam/WES_B_Disease.sorted.RGadded.marked.realigned.fixed.recal.bam" : No such file or directory
+[mpileup] failed to open ../bam/WES_B_Disease.sorted.RGadded.marked.realigned.fixed.recal.bam: No such file or directory
+[mpileup] 1 samples in 1 input files
+Normal Pileup: ../bam/WES_B_Normal.mpileup
+Tumor Pileup: ../bam/WES_B_Disease.mpileup
+NOTICE: While dual input files are still supported, using a single mpileup file (normal-tumor) with the --mpileup 1 setting is strongly recommended.
+Min coverage:	8x for Normal, 6x for Tumor
+Min reads2:	2
+Min strands2:	1
+Min var freq:	0.2
+Min freq for hom:	0.75
+Normal purity:	1.0
+Tumor purity:	1.0
+Min avg qual:	15
+P-value thresh:	0.99
+Somatic p-value:	0.05
+0 positions in tumor
+0 positions shared in normal
+0 had sufficient coverage for comparison
+0 were called Reference
+0 were mixed SNP-indel calls and filtered
+0 were called Germline
+0 were called LOH
+0 were called Somatic
+0 were called Unknown
+0 were called Variant

@@ -1,0 +1,26 @@
+(dp0
+S'isShellCmd'
+p1
+I01
+sS'cmd'
+p2
+S'"/opt/biogrids/x86_64-linux/strelka/2.9.2/libexec/bgzip" "/scratch/2022_summer_internship/mjcho/FCD_project/WES_B_strelka/workspace/genomeSegment.tmpdir/somatic.snvs.unfiltered.chromId_017_18_0000.vcf" && "/opt/biogrids/x86_64-linux/strelka/2.9.2/libexec/bgzip" "/scratch/2022_summer_internship/mjcho/FCD_project/WES_B_strelka/workspace/genomeSegment.tmpdir/somatic.indels.unfiltered.chromId_017_18_0000.vcf"'
+p3
+sS'errFile'
+p4
+S'/scratch/2022_summer_internship/mjcho/FCD_project/WES_B_strelka/workspace/pyflow.data/logs/pyflow_tasks_stderr_log.txt'
+p5
+sS'outFile'
+p6
+S'/scratch/2022_summer_internship/mjcho/FCD_project/WES_B_strelka/workspace/pyflow.data/logs/pyflow_tasks_stdout_log.txt'
+p7
+sS'env'
+p8
+NsS'nCores'
+p9
+I1
+sS'cwd'
+p10
+S''
+p11
+s.

@@ -1,0 +1,4 @@
+[2022-07-26T06:09:29.322402Z] [compgen] [23904_1] [pyflowTaskWrapper:CallGenome+Indel_concat_vcf] [wrapperSignal] wrapperStart
+[2022-07-26T06:09:29.327977Z] [compgen] [23904_1] [pyflowTaskWrapper:CallGenome+Indel_concat_vcf] [wrapperSignal] taskStart
+[2022-07-26T06:09:29.332034Z] [compgen] [23904_1] [pyflowTaskWrapper:CallGenome+Indel_concat_vcf] [wrapperSignal] taskExitCode 0
+[2022-07-26T06:09:29.332503Z] [compgen] [23904_1] [pyflowTaskWrapper:CallGenome+Indel_concat_vcf] [wrapperSignal] taskElapsedSec 0

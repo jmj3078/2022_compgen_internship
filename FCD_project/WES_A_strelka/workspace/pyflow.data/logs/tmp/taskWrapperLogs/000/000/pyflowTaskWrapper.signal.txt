@@ -1,0 +1,4 @@
+[2022-07-26T06:14:57.879328Z] [compgen] [29748_1] [pyflowTaskWrapper:getChromDepth_makeTmpDir] [wrapperSignal] wrapperStart
+[2022-07-26T06:14:57.886915Z] [compgen] [29748_1] [pyflowTaskWrapper:getChromDepth_makeTmpDir] [wrapperSignal] taskStart
+[2022-07-26T06:14:57.889515Z] [compgen] [29748_1] [pyflowTaskWrapper:getChromDepth_makeTmpDir] [wrapperSignal] taskExitCode 0
+[2022-07-26T06:14:57.890195Z] [compgen] [29748_1] [pyflowTaskWrapper:getChromDepth_makeTmpDir] [wrapperSignal] taskElapsedSec 0

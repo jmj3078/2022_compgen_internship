@@ -1,0 +1,4 @@
+[2022-07-26T06:44:34.097928Z] [compgen] [29748_1] [pyflowTaskWrapper:CallGenome+mergeRunStats] [wrapperSignal] wrapperStart
+[2022-07-26T06:44:34.110508Z] [compgen] [29748_1] [pyflowTaskWrapper:CallGenome+mergeRunStats] [wrapperSignal] taskStart
+[2022-07-26T06:44:34.162375Z] [compgen] [29748_1] [pyflowTaskWrapper:CallGenome+mergeRunStats] [wrapperSignal] taskExitCode 0
+[2022-07-26T06:44:34.163587Z] [compgen] [29748_1] [pyflowTaskWrapper:CallGenome+mergeRunStats] [wrapperSignal] taskElapsedSec 0
