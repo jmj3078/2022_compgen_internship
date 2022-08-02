@@ -1,0 +1,7 @@
+The executable python was not found. 
+
+The version of the application that contains python may not be installed 
+or may not be configured in this shell. 
+Please check your version configuration in ~/.sbgrid.conf . 
+
+Email bugs@sbgrid.org for help or to report an error. 

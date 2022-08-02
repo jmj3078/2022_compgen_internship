@@ -63,18 +63,15 @@ def varID_to_gene(Idlist, entrez_email):
     return result
 
 
+def vcf_to_avinput(vcf_path):
+    df = vcf_to_DataFrame(vcf_path)
+    edit = df.iloc[:,[0,1,3,4]]
+    edit.insert(2, 'end', df["POS"])
+    edit.columns = ["chr", "start", "end", "ref", "alt"]
+    edit.to_csv(f"{vcf_path}.edited.avinput", sep="\t", index=False)
+
 
 if __name__ == "__main__":
-    vcf_path = "./samples/indels_filtered.vcf.gz"
-    entrez_email = "jmj3078@g.skku.edu"
-    df = vcf_to_DataFrame(vcf_path)
-    IdList = df['ID'].tolist()
-
-    SNP_genes = varID_to_gene(IdList, entrez_email)
-    df = vcf_to_DataFrame(vcf_path)
-
-    s = pd.Series(SNP_genes, name='GENE')
-    df = pd.concat([df, s], axis=1)
-    df.to_csv(vcf_path + '.csv', index=False)
-
+    vcf_path = input("input vcf path")
+    vcf_to_avinput(vcf_path)
     

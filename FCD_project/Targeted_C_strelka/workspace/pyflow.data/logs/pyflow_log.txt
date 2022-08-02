@@ -1772,3 +1772,49 @@
 [2022-07-26T06:09:55.978869Z] [compgen] [23904_1] [WorkflowRunner] 
 [2022-07-26T06:09:55.980187Z] [compgen] [23904_1] [WorkflowRunner] Workflow successfully completed all tasks
 [2022-07-26T06:09:55.981501Z] [compgen] [23904_1] [WorkflowRunner] Elapsed time for full workflow: 108 sec
+[2022-08-01T02:58:21.360816Z] [compgen] [13943_1] [WorkflowRunner] Initiating pyFlow run
+[2022-08-01T02:58:21.376196Z] [compgen] [13943_1] [WorkflowRunner] pyFlowClientWorkflowClass: StrelkaSomaticWorkflow
+[2022-08-01T02:58:21.376969Z] [compgen] [13943_1] [WorkflowRunner] pyFlowVersion: 1.1.20
+[2022-08-01T02:58:21.378048Z] [compgen] [13943_1] [WorkflowRunner] pythonVersion: 2.7.5.final.0
+[2022-08-01T02:58:21.379043Z] [compgen] [13943_1] [WorkflowRunner] WorkingDir: '/scratch/2022_summer_internship/mjcho/FCD_project'
+[2022-08-01T02:58:21.380027Z] [compgen] [13943_1] [WorkflowRunner] ProcessCmdLine: './Targeted_C_strelka/runWorkflow.py -m local'
+[2022-08-01T02:58:21.380931Z] [compgen] [13943_1] [WorkflowRunner] [RunParameters] mode: local
+[2022-08-01T02:58:21.381805Z] [compgen] [13943_1] [WorkflowRunner] [RunParameters] nCores: 48
+[2022-08-01T02:58:21.382705Z] [compgen] [13943_1] [WorkflowRunner] [RunParameters] memMb: 257475
+[2022-08-01T02:58:21.383578Z] [compgen] [13943_1] [WorkflowRunner] [RunParameters] dataDir: /scratch/2022_summer_internship/mjcho/FCD_project/Targeted_C_strelka/workspace/pyflow.data
+[2022-08-01T02:58:21.384484Z] [compgen] [13943_1] [WorkflowRunner] [RunParameters] isDryRun: False
+[2022-08-01T02:58:21.385375Z] [compgen] [13943_1] [WorkflowRunner] [RunParameters] isContinue: True
+[2022-08-01T02:58:21.386274Z] [compgen] [13943_1] [WorkflowRunner] [RunParameters] isForceContinue: True
+[2022-08-01T02:58:21.387166Z] [compgen] [13943_1] [WorkflowRunner] [RunParameters] mailTo: ''
+[2022-08-01T02:58:21.388561Z] [compgen] [13943_1] [TaskRunner:masterWorkflow] Starting task specification for master workflow
+[2022-08-01T02:58:21.389836Z] [compgen] [13943_1] [StrelkaSomaticWorkflow] Initiating Strelka somatic workflow version: 2.9.2
+[2022-08-01T02:58:21.391942Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_makeTmpDir' to master workflow
+[2022-08-01T02:58:21.394104Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_makeTmpDir' to master workflow
+[2022-08-01T02:58:21.398111Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_estimateChromDepth_000_1' to master workflow
+[2022-08-01T02:58:21.401607Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_estimateChromDepth_001_2' to master workflow
+[2022-08-01T02:58:21.403040Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_estimateChromDepth_002_3' to master workflow
+[2022-08-01T02:58:21.407100Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_estimateChromDepth_004_5' to master workflow
+[2022-08-01T02:58:21.410785Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_estimateChromDepth_005_6' to master workflow
+[2022-08-01T02:58:21.414453Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_estimateChromDepth_006_7' to master workflow
+[2022-08-01T02:58:21.418333Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_estimateChromDepth_008_9' to master workflow
+[2022-08-01T02:58:21.421908Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_estimateChromDepth_009_10' to master workflow
+[2022-08-01T02:58:21.425860Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_estimateChromDepth_011_12' to master workflow
+[2022-08-01T02:58:21.426885Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_estimateChromDepth_013_14' to master workflow
+[2022-08-01T02:58:21.427907Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_estimateChromDepth_014_15' to master workflow
+[2022-08-01T02:58:21.432960Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_estimateChromDepth_015_16' to master workflow
+[2022-08-01T02:58:21.435923Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_estimateChromDepth_016_17' to master workflow
+[2022-08-01T02:58:21.437508Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_estimateChromDepth_017_18' to master workflow
+[2022-08-01T02:58:21.442063Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_estimateChromDepth_018_19' to master workflow
+[2022-08-01T02:58:21.443894Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_estimateChromDepth_021_22' to master workflow
+[2022-08-01T02:58:21.445908Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_estimateChromDepth_022_X' to master workflow
+[2022-08-01T02:58:21.448844Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_sample000_catChromDepth' to master workflow
+[2022-08-01T02:58:21.450853Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_mergeChromDepth' to master workflow
+[2022-08-01T02:58:21.453827Z] [compgen] [13943_1] [WorkflowRunner] Adding command task 'getChromDepth_removeTmpDir' to master workflow
+[2022-08-01T02:58:21.457700Z] [compgen] [13943_1] [WorkflowRunner] Adding sub-workflow task 'CallGenome' to master workflow
+[2022-08-01T02:58:21.459911Z] [compgen] [13943_1] [TaskRunner:masterWorkflow] Finished task specification for master workflow
+[2022-08-01T02:58:21.510611Z] [compgen] [13943_1] [WorkflowRunner] Strelka somatic workflow successfully completed.
+[2022-08-01T02:58:21.510611Z] [compgen] [13943_1] [WorkflowRunner] 
+[2022-08-01T02:58:21.510611Z] [compgen] [13943_1] [WorkflowRunner] 	workflow version: 2.9.2
+[2022-08-01T02:58:21.512028Z] [compgen] [13943_1] [WorkflowRunner] 
+[2022-08-01T02:58:21.513333Z] [compgen] [13943_1] [WorkflowRunner] Workflow successfully completed all tasks
+[2022-08-01T02:58:21.514659Z] [compgen] [13943_1] [WorkflowRunner] Elapsed time for full workflow: 0 sec

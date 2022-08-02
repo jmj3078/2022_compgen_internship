@@ -1,0 +1,231 @@
+Using GATK jar /opt/biogrids/x86_64-linux/gatk/4.2.5.0/bin/gatk-package-4.2.5.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -XX:+UseSerialGC -Xms4G -Xmx4G -Djava.io.tmpdir=./log/tmp/ -jar /opt/biogrids/x86_64-linux/gatk/4.2.5.0/bin/gatk-package-4.2.5.0-local.jar Mutect2 -R /data/references/b37/human_g1k_v37_decoy.fasta -I /scratch/2022_summer_internship/mjcho/week5_somatic_variant/bam/1C_amp.bam -I /scratch/2022_summer_internship/mjcho/week5_somatic_variant/bam/1F_amp.bam -tumor 1C_amp/1C_amp.bam -normal 1F_amp/1F_amp.bam -O amp.somatic.vcf.gz --native-pair-hmm-threads 2 -L /scratch/2022_summer_internship/mjcho/week5_somatic_variant/bed/total.merged.bed -pon /scratch/2022_summer_internship/mjcho/week6/PoN/pon.vcf.gz --minimum-mapping-quality 6 -active-probability-threshold 0.0015
+14:22:19.566 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/opt/biogrids/x86_64-linux/gatk/4.2.5.0/bin/gatk-package-4.2.5.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Jul 13, 2022 2:22:19 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+14:22:19.673 INFO  Mutect2 - ------------------------------------------------------------
+14:22:19.674 INFO  Mutect2 - The Genome Analysis Toolkit (GATK) v4.2.5.0
+14:22:19.674 INFO  Mutect2 - For support and documentation go to https://software.broadinstitute.org/gatk/
+14:22:19.674 INFO  Mutect2 - Executing as mjcho@compgen on Linux v3.10.0-1160.el7.x86_64 amd64
+14:22:19.674 INFO  Mutect2 - Java runtime: OpenJDK 64-Bit Server VM v1.8.0_322-b06
+14:22:19.674 INFO  Mutect2 - Start Date/Time: July 13, 2022 2:22:19 PM KST
+14:22:19.674 INFO  Mutect2 - ------------------------------------------------------------
+14:22:19.674 INFO  Mutect2 - ------------------------------------------------------------
+14:22:19.674 INFO  Mutect2 - HTSJDK Version: 2.24.1
+14:22:19.674 INFO  Mutect2 - Picard Version: 2.25.4
+14:22:19.674 INFO  Mutect2 - Built for Spark Version: 2.4.5
+14:22:19.675 INFO  Mutect2 - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+14:22:19.675 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+14:22:19.675 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+14:22:19.675 INFO  Mutect2 - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+14:22:19.675 INFO  Mutect2 - Deflater: IntelDeflater
+14:22:19.675 INFO  Mutect2 - Inflater: IntelInflater
+14:22:19.675 INFO  Mutect2 - GCS max retries/reopens: 20
+14:22:19.675 INFO  Mutect2 - Requester pays: disabled
+14:22:19.675 INFO  Mutect2 - Initializing engine
+WARNING	2022-07-13 14:22:19	SamFiles	The index file /scratch/2022_summer_internship/mjcho/week4_germline_variant/bam/1C_amp.sorted.RGadded.realigend.fixed.recal.bai was found by resolving the canonical path of a symlink: /scratch/2022_summer_internship/mjcho/week5_somatic_variant/bam/1C_amp.bam -> /scratch/2022_summer_internship/mjcho/week4_germline_variant/bam/1C_amp.sorted.RGadded.realigend.fixed.recal.bam
+WARNING: BAM index file /scratch/2022_summer_internship/mjcho/week4_germline_variant/bam/1C_amp.sorted.RGadded.realigend.fixed.recal.bai is older than BAM /scratch/2022_summer_internship/mjcho/week5_somatic_variant/bam/1C_amp.bam
+WARNING	2022-07-13 14:22:19	SamFiles	The index file /scratch/2022_summer_internship/mjcho/week4_germline_variant/bam/1F_amp.sorted.RGadded.realigend.fixed.recal.bai was found by resolving the canonical path of a symlink: /scratch/2022_summer_internship/mjcho/week5_somatic_variant/bam/1F_amp.bam -> /scratch/2022_summer_internship/mjcho/week4_germline_variant/bam/1F_amp.sorted.RGadded.realigend.fixed.recal.bam
+WARNING: BAM index file /scratch/2022_summer_internship/mjcho/week4_germline_variant/bam/1F_amp.sorted.RGadded.realigend.fixed.recal.bai is older than BAM /scratch/2022_summer_internship/mjcho/week5_somatic_variant/bam/1F_amp.bam
+14:22:19.997 INFO  FeatureManager - Using codec VCFCodec to read file file:///scratch/2022_summer_internship/mjcho/week6/PoN/pon.vcf.gz
+14:22:20.045 WARN  IntelInflater - Zero Bytes Written : 0
+14:22:20.068 INFO  FeatureManager - Using codec BEDCodec to read file file:///scratch/2022_summer_internship/mjcho/week5_somatic_variant/bed/total.merged.bed
+14:22:20.080 INFO  IntervalArgumentCollection - Processing 67128 bp from intervals
+14:22:20.097 INFO  Mutect2 - Done initializing engine
+14:22:20.119 INFO  NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/opt/biogrids/x86_64-linux/gatk/4.2.5.0/bin/gatk-package-4.2.5.0-local.jar!/com/intel/gkl/native/libgkl_utils.so
+14:22:20.119 INFO  NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/opt/biogrids/x86_64-linux/gatk/4.2.5.0/bin/gatk-package-4.2.5.0-local.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so
+14:22:20.161 INFO  IntelPairHmm - Using CPU-supported AVX-512 instructions
+14:22:20.161 INFO  IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM
+14:22:20.161 INFO  IntelPairHmm - Available threads: 2
+14:22:20.161 INFO  IntelPairHmm - Requested threads: 2
+14:22:20.161 INFO  PairHMM - Using the OpenMP multi-threaded AVX-accelerated native PairHMM implementation
+14:22:20.195 INFO  ProgressMeter - Starting traversal
+14:22:20.195 INFO  ProgressMeter -        Current Locus  Elapsed Minutes     Regions Processed   Regions/Minute
+14:22:30.996 INFO  ProgressMeter -           1:35920038              0.2                    20            111.1
+14:22:43.758 INFO  ProgressMeter -           1:84945013              0.4                    40            101.9
+14:22:55.032 INFO  ProgressMeter -          1:201184137              0.6                    60            103.3
+14:23:15.524 INFO  ProgressMeter -          1:230895316              0.9                    80             86.8
+14:24:06.883 INFO  ProgressMeter -           2:71221818              1.8                   100             56.2
+14:24:22.326 INFO  ProgressMeter -           2:97617163              2.0                   110             54.0
+14:25:06.631 INFO  ProgressMeter -          2:121989398              2.8                   120             43.3
+14:25:20.253 INFO  ProgressMeter -          2:160132079              3.0                   130             43.3
+14:25:37.592 INFO  ProgressMeter -          2:231333754              3.3                   150             45.6
+14:25:50.052 INFO  ProgressMeter -          2:234386079              3.5                   160             45.7
+14:26:05.701 INFO  ProgressMeter -           3:39152338              3.8                   180             47.9
+14:26:26.004 INFO  ProgressMeter -          3:125199100              4.1                   210             51.3
+14:26:38.799 INFO  ProgressMeter -          3:183433040              4.3                   230             53.4
+14:27:33.129 INFO  ProgressMeter -           4:68500143              5.2                   250             47.9
+14:27:46.304 INFO  ProgressMeter -           4:98893427              5.4                   260             47.8
+14:28:04.613 INFO  ProgressMeter -          4:129100599              5.7                   270             47.0
+14:28:26.489 INFO  ProgressMeter -             5:233592              6.1                   280             45.9
+14:28:45.453 INFO  ProgressMeter -           5:40931162              6.4                   290             45.2
+14:29:14.622 INFO  ProgressMeter -           5:95236393              6.9                   300             43.4
+14:29:27.592 INFO  ProgressMeter -          5:147692933              7.1                   310             43.5
+14:29:40.430 INFO  ProgressMeter -          5:178581811              7.3                   320             43.6
+14:29:52.355 INFO  ProgressMeter -           6:31692360              7.5                   330             43.8
+14:30:06.293 INFO  ProgressMeter -           6:38800094              7.8                   340             43.8
+14:30:17.350 INFO  ProgressMeter -           6:71508425              8.0                   360             45.3
+14:30:28.188 INFO  ProgressMeter -          6:117860414              8.1                   370             45.5
+14:30:39.575 INFO  ProgressMeter -            7:6452438              8.3                   390             46.9
+14:30:52.385 INFO  ProgressMeter -           7:16460713              8.5                   400             46.9
+14:31:11.196 INFO  ProgressMeter -           7:50180925              8.9                   410             46.3
+14:31:25.177 INFO  ProgressMeter -           7:97847026              9.1                   420             46.2
+14:31:44.099 INFO  ProgressMeter -           8:27277408              9.4                   440             46.8
+14:32:03.872 INFO  ProgressMeter -           8:59508115              9.7                   450             46.3
+14:32:28.238 INFO  ProgressMeter -            9:6984173             10.1                   470             46.4
+14:32:40.791 INFO  ProgressMeter -           9:86900256             10.3                   480             46.4
+14:32:51.600 INFO  ProgressMeter -          9:111868784             10.5                   490             46.6
+14:33:02.706 INFO  ProgressMeter -          9:134497254             10.7                   500             46.7
+14:33:17.779 INFO  ProgressMeter -          10:50680963             11.0                   520             47.4
+14:33:33.550 INFO  ProgressMeter -         10:116719504             11.2                   540             48.1
+14:33:50.499 INFO  ProgressMeter -         10:126691529             11.5                   550             47.8
+14:34:16.534 INFO  ProgressMeter -          11:22283671             11.9                   570             47.7
+14:34:30.379 INFO  ProgressMeter -         11:100792221             12.2                   590             48.5
+14:34:41.030 INFO  ProgressMeter -           12:7655070             12.3                   610             49.4
+14:35:25.789 INFO  ProgressMeter -          12:81067073             13.1                   640             48.9
+14:35:35.852 INFO  ProgressMeter -         12:110383061             13.3                   650             49.0
+14:35:56.713 INFO  ProgressMeter -          13:46154734             13.6                   670             49.2
+14:36:10.598 INFO  ProgressMeter -         13:102220080             13.8                   680             49.1
+14:36:21.643 INFO  ProgressMeter -          14:65268076             14.0                   700             49.9
+14:36:38.529 INFO  ProgressMeter -          15:63548700             14.3                   720             50.3
+14:36:49.495 INFO  ProgressMeter -          16:77323157             14.5                   750             51.8
+14:37:00.602 INFO  ProgressMeter -          17:37070574             14.7                   790             53.8
+14:37:11.772 INFO  ProgressMeter -          17:67290792             14.9                   800             53.8
+14:37:25.341 INFO  ProgressMeter -            19:430680             15.1                   820             54.4
+14:37:41.606 INFO  ProgressMeter -          20:31890718             15.4                   860             56.0
+14:38:00.744 INFO  ProgressMeter -          21:38563631             15.7                   880             56.1
+14:38:16.196 INFO  ProgressMeter -          22:43459871             15.9                   910             57.1
+14:38:16.401 INFO  Mutect2 - 538426 read(s) filtered by: MappingQualityReadFilter 
+0 read(s) filtered by: MappingQualityAvailableReadFilter 
+0 read(s) filtered by: MappingQualityNotZeroReadFilter 
+0 read(s) filtered by: MappedReadFilter 
+0 read(s) filtered by: NotSecondaryAlignmentReadFilter 
+0 read(s) filtered by: NotDuplicateReadFilter 
+0 read(s) filtered by: PassesVendorQualityCheckReadFilter 
+0 read(s) filtered by: NonChimericOriginalAlignmentReadFilter 
+0 read(s) filtered by: NonZeroReferenceLengthAlignmentReadFilter 
+0 read(s) filtered by: ReadLengthReadFilter 
+0 read(s) filtered by: GoodCigarReadFilter 
+0 read(s) filtered by: WellformedReadFilter 
+538426 total reads filtered
+14:38:16.402 INFO  ProgressMeter -          22:43459871             15.9                   914             57.4
+14:38:16.402 INFO  ProgressMeter - Traversal complete. Processed 914 total regions in 15.9 minutes.
+14:38:16.469 INFO  VectorLoglessPairHMM - Time spent in setup for JNI call : 0.14796140500000002
+14:38:16.469 INFO  PairHMM - Total compute time in PairHMM computeLogLikelihoods() : 68.676004727
+14:38:16.469 INFO  SmithWatermanAligner - Total compute time in java Smith-Waterman : 30.89 sec
+14:38:16.470 INFO  Mutect2 - Shutting down engine
+[July 13, 2022 2:38:16 PM KST] org.broadinstitute.hellbender.tools.walkers.mutect.Mutect2 done. Elapsed time: 15.95 minutes.
+Runtime.totalMemory()=4151836672
+Using GATK jar /opt/biogrids/x86_64-linux/gatk/4.2.5.0/bin/gatk-package-4.2.5.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -XX:+UseSerialGC -Xms1G -Xmx1G -Djava.io.tmpdir=./log/tmp/ -jar /opt/biogrids/x86_64-linux/gatk/4.2.5.0/bin/gatk-package-4.2.5.0-local.jar FilterMutectCalls -R /data/references/b37/human_g1k_v37_decoy.fasta -V amp.somatic.vcf.gz -O amp.somatic.filtered.vcf.gz -L /scratch/2022_summer_internship/mjcho/week5_somatic_variant/bed/total.merged.bed -f-score-beta 0.5
+14:38:18.868 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/opt/biogrids/x86_64-linux/gatk/4.2.5.0/bin/gatk-package-4.2.5.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+Jul 13, 2022 2:38:18 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+14:38:18.974 INFO  FilterMutectCalls - ------------------------------------------------------------
+14:38:18.974 INFO  FilterMutectCalls - The Genome Analysis Toolkit (GATK) v4.2.5.0
+14:38:18.974 INFO  FilterMutectCalls - For support and documentation go to https://software.broadinstitute.org/gatk/
+14:38:18.974 INFO  FilterMutectCalls - Executing as mjcho@compgen on Linux v3.10.0-1160.el7.x86_64 amd64
+14:38:18.974 INFO  FilterMutectCalls - Java runtime: OpenJDK 64-Bit Server VM v1.8.0_322-b06
+14:38:18.975 INFO  FilterMutectCalls - Start Date/Time: July 13, 2022 2:38:18 PM KST
+14:38:18.975 INFO  FilterMutectCalls - ------------------------------------------------------------
+14:38:18.975 INFO  FilterMutectCalls - ------------------------------------------------------------
+14:38:18.975 INFO  FilterMutectCalls - HTSJDK Version: 2.24.1
+14:38:18.975 INFO  FilterMutectCalls - Picard Version: 2.25.4
+14:38:18.975 INFO  FilterMutectCalls - Built for Spark Version: 2.4.5
+14:38:18.975 INFO  FilterMutectCalls - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+14:38:18.975 INFO  FilterMutectCalls - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+14:38:18.975 INFO  FilterMutectCalls - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+14:38:18.975 INFO  FilterMutectCalls - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+14:38:18.975 INFO  FilterMutectCalls - Deflater: IntelDeflater
+14:38:18.975 INFO  FilterMutectCalls - Inflater: IntelInflater
+14:38:18.975 INFO  FilterMutectCalls - GCS max retries/reopens: 20
+14:38:18.975 INFO  FilterMutectCalls - Requester pays: disabled
+14:38:18.975 INFO  FilterMutectCalls - Initializing engine
+14:38:19.264 INFO  FeatureManager - Using codec VCFCodec to read file file:///scratch/2022_summer_internship/mjcho/week5_somatic_variant/prj_amp/amp.somatic.vcf.gz
+14:38:19.296 WARN  IntelInflater - Zero Bytes Written : 0
+14:38:19.323 WARN  IntelInflater - Zero Bytes Written : 0
+14:38:19.333 INFO  FeatureManager - Using codec BEDCodec to read file file:///scratch/2022_summer_internship/mjcho/week5_somatic_variant/bed/total.merged.bed
+14:38:19.342 INFO  IntervalArgumentCollection - Processing 67128 bp from intervals
+14:38:19.347 INFO  FilterMutectCalls - Done initializing engine
+14:38:19.399 INFO  ProgressMeter - Starting traversal
+14:38:19.399 INFO  ProgressMeter -        Current Locus  Elapsed Minutes    Variants Processed  Variants/Minute
+14:38:19.400 INFO  FilterMutectCalls - Starting pass 0 through the variants
+14:38:19.775 INFO  FilterMutectCalls - Finished pass 0 through the variants
+14:38:19.878 INFO  FilterMutectCalls - Starting pass 1 through the variants
+14:38:20.000 INFO  FilterMutectCalls - Finished pass 1 through the variants
+14:38:20.018 INFO  FilterMutectCalls - Starting pass 2 through the variants
+14:38:20.102 INFO  FilterMutectCalls - Finished pass 2 through the variants
+14:38:20.103 INFO  FilterMutectCalls - Starting pass 3 through the variants
+14:38:20.261 INFO  FilterMutectCalls - Finished pass 3 through the variants
+14:38:20.265 INFO  FilterMutectCalls - No variants filtered by: AllowAllVariantsVariantFilter
+14:38:20.265 INFO  FilterMutectCalls - 0 read(s) filtered by: AllowAllReadsReadFilter 
+
+14:38:20.265 INFO  ProgressMeter -          11:46917819              0.0                  1544         106974.6
+14:38:20.266 INFO  ProgressMeter - Traversal complete. Processed 1544 total variants in 0.0 minutes.
+14:38:20.278 INFO  FilterMutectCalls - Shutting down engine
+[July 13, 2022 2:38:20 PM KST] org.broadinstitute.hellbender.tools.walkers.mutect.filtering.FilterMutectCalls done. Elapsed time: 0.02 minutes.
+Runtime.totalMemory()=1037959168
+gzip: HC.somatic.filtered.vcf.gz: No such file or directory
+NOTICE: Finished reading 0 lines from VCF file
+NOTICE: A total of 0 locus in VCF file passed QC threshold, representing 0 SNPs (0 transitions and 0 transversions) and 0 indels/substitutions
+NOTICE: Finished writing 0 SNP genotypes (0 transitions and 0 transversions) and 0 indels/substitutions for 1 sample
+-----------------------------------------------------------------
+NOTICE: Processing operation=gx protocol=refGene
+
+NOTICE: Running with system command <annotate_variation.pl -geneanno -buildver hg19 -dbtype refGene -outfile amp.annovar.refGene -exonsort amp.avinput /opt/tools/annovar/humandb/>
+NOTICE: Output files were written to amp.annovar.refGene.variant_function, amp.annovar.refGene.exonic_variant_function
+NOTICE: Reading gene annotation from /opt/tools/annovar/humandb/hg19_refGene.txt ... Done with 63481 transcripts (including 15216 without coding sequence annotation) for 27720 unique genes
+
+NOTICE: Running with system command <coding_change.pl amp.annovar.refGene.exonic_variant_function.orig /opt/tools/annovar/humandb//hg19_refGene.txt /opt/tools/annovar/humandb//hg19_refGeneMrna.fa -alltranscript -out amp.annovar.refGene.fa -newevf amp.annovar.refGene.exonic_variant_function>
+NOTICE: The xrefkey is provided in header as <pLi pRec pNull Gene_full_name Function_description Disease_description Tissue_specificity(Uniprot) Expression(egenetics) Expression(GNF/Atlas) P(HI) P(rec) RVIS RVIS_percentile GDI GDI-Phred>
+NOTICE: Finished reading 597255 cross references (each with 15 fields) from /opt/tools/annovar/example/gene_fullxref.txt
+-----------------------------------------------------------------
+NOTICE: Processing operation=r protocol=cytoBand
+
+NOTICE: Running with system command <annotate_variation.pl -regionanno -dbtype cytoBand -buildver hg19 -outfile amp.annovar amp.avinput /opt/tools/annovar/humandb/>
+NOTICE: Output file is written to amp.annovar.hg19_cytoBand
+NOTICE: Reading annotation database /opt/tools/annovar/humandb/hg19_cytoBand.txt ... Done with 862 regions
+NOTICE: Finished region-based annotation on 0 genetic variants
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=cosmic70
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype cosmic70 -buildver hg19 -outfile amp.annovar amp.avinput /opt/tools/annovar/humandb/>
+NOTICE: the --dbtype cosmic70 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to amp.annovar.hg19_cosmic70_dropped, other variants are written to amp.annovar.hg19_cosmic70_filtered
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=exac03
+NOTICE: Finished reading 8 column headers for '-dbtype exac03'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype exac03 -buildver hg19 -outfile amp.annovar amp.avinput /opt/tools/annovar/humandb/ -otherinfo>
+NOTICE: the --dbtype exac03 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to amp.annovar.hg19_exac03_dropped, other variants are written to amp.annovar.hg19_exac03_filtered
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=gnomad_genome
+NOTICE: Finished reading 8 column headers for '-dbtype gnomad_genome'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype gnomad_genome -buildver hg19 -outfile amp.annovar amp.avinput /opt/tools/annovar/humandb/ -otherinfo>
+NOTICE: the --dbtype gnomad_genome is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to amp.annovar.hg19_gnomad_genome_dropped, other variants are written to amp.annovar.hg19_gnomad_genome_filtered
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=avsnp147
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype avsnp147 -buildver hg19 -outfile amp.annovar amp.avinput /opt/tools/annovar/humandb/>
+NOTICE: Variants matching filtering criteria are written to amp.annovar.hg19_avsnp147_dropped, other variants are written to amp.annovar.hg19_avsnp147_filtered
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=clinvar_20190305
+NOTICE: Finished reading 5 column headers for '-dbtype clinvar_20190305'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype clinvar_20190305 -buildver hg19 -outfile amp.annovar amp.avinput /opt/tools/annovar/humandb/ -otherinfo>
+NOTICE: the --dbtype clinvar_20190305 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to amp.annovar.hg19_clinvar_20190305_dropped, other variants are written to amp.annovar.hg19_clinvar_20190305_filtered
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=HGMD.v4
+NOTICE: Finished reading 1 column headers for '-dbtype HGMD.v4'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype HGMD.v4 -buildver hg19 -outfile amp.annovar amp.avinput /opt/tools/annovar/humandb/ -otherinfo>
+NOTICE: the --dbtype HGMD.v4 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to amp.annovar.hg19_HGMD.v4_dropped, other variants are written to amp.annovar.hg19_HGMD.v4_filtered
+-----------------------------------------------------------------
+NOTICE: Multianno output file is written to amp.annovar.hg19_multianno.txt

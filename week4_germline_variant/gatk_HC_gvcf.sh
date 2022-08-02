@@ -18,6 +18,13 @@ BED=$3
 
 date
 
-gatk --java-options "-XX:+UseSerialGC -Xms2G -Xmx2G -Djava.io.tmpdir=./log/" HaplotypeCaller -R $REF -I $BAM -O $SAMPLE.g.vcf.gz --dbsnp $dbSNP -ERC GVCF --native-pair-hmm-threads 2 -L $BED
+gatk --java-options "-XX:+UseSerialGC -Xms2G -Xmx2G -Djava.io.tmpdir=./log/" HaplotypeCaller \
+-R $REF \
+-I $BAM -O \
+$SAMPLE.g.vcf.gz \
+--dbsnp $dbSNP \
+-ERC GVCF \
+--native-pair-hmm-threads 2 \
+-L $BED
 
 date

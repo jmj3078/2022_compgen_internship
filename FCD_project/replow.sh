@@ -21,6 +21,9 @@ RSCRIPT=/opt/biogrids/x86_64-linux/system/biogrids_bin/Rscript
 OUTPUT_DIR=./$INPUT\_RePlow
 LABEL=out
 
+# run RePlow.1.1.0
+# You should use unedited .bed file
+
 if [ ! -d $INPUT\_RePlow ];then
     mkdir $INPUT\_RePlow
     echo "make $INPUT\_RePlow directory"
