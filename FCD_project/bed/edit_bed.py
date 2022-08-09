@@ -5,5 +5,6 @@ output_path = input("Output bed file path : ")
 df = pd.read_table(bed_path, sep='\t', names=['Chrom', 'start', 'end', 'w'])
 
 df["Chrom"] = df["Chrom"].str.replace('chr', '')
+df.rm["w"]
 
 df.to_csv(output_path, sep='\t', index = False, header = False)
