@@ -2,9 +2,9 @@
 #SBATCH -J germline_call
 #SBATCH -n 2
 #SBATCH -N 1
-#SBATCH -t 4-00:00
+#SBATCH -t 2-00:00
 #SBATCH -p 48core
-#SBATCH --mem=17G
+#SBATCH --mem=6G
 #SBATCH -o ./log/germline_%j.out
 #SBATCH -e ./log/germline_%j.err
 #SBATCH --mail-type=FAIL,END
@@ -26,7 +26,7 @@ else
 fi
 
 
-gatk --java-options "-XX:+UseSerialGC -Xms16G -Xmx16G -Djava.io.tmpdir=./log/tmp/" HaplotypeCaller \
+gatk --java-options "-XX:+UseSerialGC -Xms4G -Xmx4G -Djava.io.tmpdir=./log/" HaplotypeCaller \
 -R $REF \
 -I ./bam/$INPUT\_Disease.sorted.RGadded.marked.realigned.fixed.recal.bam \
 -O ./$INPUT\_germline/$INPUT\_Disease.germline.g.vcf.gz \
@@ -35,7 +35,8 @@ gatk --java-options "-XX:+UseSerialGC -Xms16G -Xmx16G -Djava.io.tmpdir=./log/tmp
 --native-pair-hmm-threads 2 \
 --intervals $BED \
 
-gatk --java-options "-XX:+UseSerialGC -Xms16G -Xmx16G -Djava.io.tmpdir=./log/tmp/" HaplotypeCaller \
+
+gatk --java-options "-XX:+UseSerialGC -Xms4G -Xmx4G -Djava.io.tmpdir=./log/" HaplotypeCaller \
 -R $REF \
 -I ./bam/$INPUT\_Normal.sorted.RGadded.marked.realigned.fixed.recal.bam \
 -O ./$INPUT\_germline/$INPUT\_Normal.germline.g.vcf.gz \
@@ -47,23 +48,23 @@ gatk --java-options "-XX:+UseSerialGC -Xms16G -Xmx16G -Djava.io.tmpdir=./log/tmp
 date
 echo "haplptypecaller.. done"
 
-gatk --java-options "-XX:+UseSerialGC -Xms16G -Xmx16G -Djava.io.tmpdir=./log/tmp/" GenomicsDBImport \
+gatk --java-options "-XX:+UseSerialGC -Xms4G -Xmx4G -Djava.io.tmpdir=./log/" GenomicsDBImport \
 -V ./$INPUT\_germline/$INPUT\_Disease.germline.g.vcf.gz \
 -V ./$INPUT\_germline/$INPUT\_Normal.germline.g.vcf.gz \
 --genomicsdb-workspace-path ./$INPUT\_germline/merged_db \
 -L $BED
 
-gatk --java-options "-XX:+UseSerialGC -Xms16G -Xmx16G -Djava.io.tmpdir=./log/tmp/" GenotypeGVCFs -R $REF \
+gatk --java-options "-XX:+UseSerialGC -Xms4G -Xmx4G -Djava.io.tmpdir=./log/" GenotypeGVCFs -R $REF \
 -V gendb://$INPUT\_germline/merged_db \
 -O ./$INPUT\_germline/$INPUT\_germline.merged.vcf.gz \
 --dbsnp $dbSNP
 
-gatk --java-options "-XX:+UseSerialGC -Xms16G -Xmx16G -Djava.io.tmpdir=./log/tmp/" SelectVariants \
+gatk --java-options "-XX:+UseSerialGC -Xms4G -Xmx4G -Djava.io.tmpdir=./log/" SelectVariants \
 -V ./$INPUT\_germline/$INPUT\_germline.merged.vcf.gz \
 -select-type SNP \
 -O ./$INPUT\_germline/$INPUT\_germline.snps.vcf.gz
 
-gatk --java-options "-XX:+UseSerialGC -Xms16G -Xmx16G -Djava.io.tmpdir=./log/tmp/" SelectVariants \
+gatk --java-options "-XX:+UseSerialGC -Xms4G -Xmx4G -Djava.io.tmpdir=./log/" SelectVariants \
 -V ./$INPUT\_germline/$INPUT\_germline.merged.vcf.gz \
 -select-type INDEL \
 -O ./$INPUT\_germline/$INPUT\_germline.indels.vcf.gz
@@ -71,10 +72,10 @@ gatk --java-options "-XX:+UseSerialGC -Xms16G -Xmx16G -Djava.io.tmpdir=./log/tmp
 date
 echo "genotyping.. done"
 
-gatk --java-options "-XX:+UseSerialGC -Xms16G -Xmx16G -Djava.io.tmpdir=./log/tmp/" VariantFiltration \
+gatk --java-options "-XX:+UseSerialGC -Xms4G -Xmx4G -Djava.io.tmpdir=./log/" VariantFiltration \
 -V ./$INPUT\_germline/$INPUT\_germline.snps.vcf.gz \
 -filter "QD < 2.0" --filter-name "QD2" \
--filter "QUAL < 30.0" --filter-name "QUAL30" \
+-filter "QUAL < 20.0" --filter-name "QUAL30" \
 -filter "SOR > 3.0" --filter-name "SOR3" \
 -filter "FS > 60.0" --filter-name "FS60" \
 -filter "MQ < 40.0" --filter-name "MQ40" \
@@ -82,10 +83,10 @@ gatk --java-options "-XX:+UseSerialGC -Xms16G -Xmx16G -Djava.io.tmpdir=./log/tmp
 -filter "ReadPosRankSum < -8.0" --filter-name "ReadPosRankSum-8" \
 -O ./$INPUT\_germline/$INPUT\_germline.snps.filtered.vcf.gz 
 
-gatk --java-options "-XX:+UseSerialGC -Xms16G -Xmx16G -Djava.io.tmpdir=./log/tmp/" VariantFiltration \
+gatk --java-options "-XX:+UseSerialGC -Xms4G -Xmx4G -Djava.io.tmpdir=./log/" VariantFiltration \
 -V ./$INPUT\_germline/$INPUT\_germline.indels.vcf.gz \
 -filter "QD < 2.0" --filter-name "QD2" \
--filter "QUAL < 30.0" --filter-name "QUAL30" \
+-filter "QUAL < 20.0" --filter-name "QUAL30" \
 -filter "FS > 200.0" --filter-name "FS200" \
 -filter "ReadPosRankSum < -20.0" --filter-name "ReadPosRankSum-20" \
 -O ./$INPUT\_germline/$INPUT\_germline.indels.filtered.vcf.gz
