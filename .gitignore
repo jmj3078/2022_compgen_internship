@@ -73,5 +73,8 @@ week3_preprocessing/test/log/pipe_preprocess_344.err
 week3_preprocessing/test/log/pipe_proprecess_343.out
 week3_preprocessing/test/log/pipe_proprecess_344.out
 week5_somatic_variant/prj_amp/log/tmp
-FCD_project/WES_A_germline/merged_db
-FCD_projcet/WES_B_germline/merged_db
+FCD_project/WES_A_germline/WES_A_db
+FCD_projcet/WES_B_germline/WES_B_db
+FCD_project/WES_B_germline/merged_db/__tiledb_workspace.tdb
+FCD_project/WES_B_germline/merged_db/vcfheader.vcf
+FCD_project/WES_B_germline/merged_db/vidmap.json

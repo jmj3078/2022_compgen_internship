@@ -54,7 +54,7 @@ gatk --java-options "-XX:+UseSerialGC -Xms16G -Xmx16G -Djava.io.tmpdir=./log/tmp
 -L $BED
 
 gatk --java-options "-XX:+UseSerialGC -Xms16G -Xmx16G -Djava.io.tmpdir=./log/tmp/" GenotypeGVCFs -R $REF \
--V gendb://$INPUT\_germline/merged_db \
+-V gendb://$INPUT\_germline/$INPUT\_db \
 -O ./$INPUT\_germline/$INPUT\_germline.merged.vcf.gz \
 --dbsnp $dbSNP
 
